@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *:not(footer){
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto',sans-serif;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("Gallery/slide-1.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .row{
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+
+        .col{
+            flex-basis: 50%;
+        }
+        .col h1{
+            text-shadow: 7px 5px rgba(223, 223, 223, 0.034);
+        }
+        .col p{
+            margin-left: 10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 300;
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+
+        .card p{
+            text-shadow: 0 0 15px white;
+        }
+
+        .container1{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-box{
+            width: 200px;
+            height: 500px;
+            margin: 10px;
+            border-radius: 50px;
+            background-image: url("Gallery/gallery-2.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: width 0.5s;
+        }
+
+        .img-box:nth-child(2){
+            background-image: url("Gallery/gallery-5.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-box:nth-child(3){
+            background-image: url("Gallery/slide-2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-box:nth-child(4){
+            background-image: url("Gallery/slide-3.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-box h3{
+            width: fit-content;
+            color: white;
+            font-weight: 200;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform:  translateX(-50%);
+        }
+
+        .img-box:hover{
+            width: 800px;
+            cursor: pointer;
+        }
+
+        .img-box:hover h3{
+            opacity: 1;
+            bottom: 25px;
+        }
+
+        .row1{
+            height: 80vh;
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2e9ff;
+        }   
+
+        .div-details-col{
+            height: 350px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            flex-basis: 31%;
+            border-radius: 5px;
+            margin-bottom: 5%;
+            margin: 0 20px;
+            padding: 20px 50px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            background-color: #fff;
+        }
+        .div-details-col h3{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 5vh;
+            font-weight: 500;
+        }
+        .div-details-col p{
+            margin-top: 30px;
+            font-size: 17px;
+            text-align: justify;
+
+        }
+        .div-details-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+		<div class="brand" >
+			<li id="logo"><img src="Images/Artboard 142.png"></li>
+			<!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+			<li class="social-icon">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+			
+		</div>
+		<nav class="topnav" id="myTopnav">
+			<ul>
+				<li class="f1">
+					<a href="index.html">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+				<li><a href="login.html">Sign In</a></li>
+				<li><a href="search.html">Seat Booking</a></li>
+                <li><a href="galary.html">Gallery</a></li>
+				<li><a href="train_shedule.html">Train Schedule</a></li>
+                <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                <li><a href="booking confirm.html">Booking Confirm</a></li>
+				<li><a href="Help.html">Help</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About US</a></li>
+			</ul>
+		</nav>
+	</header>
+    <!--cards-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 style="color:white;font-size: 100px;">Gallery</h1>
+                    <p style="color: white;font-size: 35px;">Welcome to Sri Lanka Railways</p>
+                    <p style="color: white;font-size: 35px;">Visit arround Sri Lanka</p>
+                </div>
+                
+            </div>
+        </div>
+        <!--Expanding images-->
+    </section>
+    <section>
+        <div class="container1">
+            <div class="gallery">
+                <div class="img-box"><h3>Hill Country</h3></div>
+                <div class="img-box"><h3>Kandy</h3></div>
+                <div class="img-box"><h3>Southern Province</h3></div>
+                <div class="img-box"><h3>Scenic Train Ride</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <!--description-->
+
+    <section class="details"> 
+        <div class="row1">
+            <div class="div-details-col">
+                <h3 style="text-align: center;margin: 10px;">Introduce</h3>
+                <p>Rail was introduced in Sri Lanka in 1864 to transport coffee
+                     from plantations in the hill country district of Kandy to the
+                      port city of Colombo on its way to Europe and the world market.
+                       The coffee blight of 1871 destroyed many a fine plantation and
+                        tea replaced coffee. With the development of tea plantations in
+                         the 1880s.</p>
+            </div>
+            <div class="div-details-col">
+                <h3 style="text-align: center;margin: 10px;">History</h3>
+                <p>Up country, a similar branch line was laid from Nanu Oya on the Main
+                     Line through very difficult terrain to serve the tea plantations around 
+                     Nuwara Eliya. Track alignment was defined in this section about 140 years
+                      ago, when economic considerations were vastly different. The railways
+                       achieved modal superiority with speeds of 25 to 40 kmph in the hill 
+                       country and 65 to 80 in the low country.</p>
+            </div>
+            <div class="div-details-col">
+                <h3 style="text-align: center;margin: 10px;">More Details</h3>
+                <p>To serve the coconut plantations flourishing in the west, southwest and northwest coastal
+                     areas of the country, and the wet inland rubber plantations below the tea belt, railway
+                      lines were built in the wake of these agricultural developments. Thereafter, the need 
+                      for cheap and safe travel in order to open up the hinterland of the country led to the 
+                      expansion of the railway.</p>
+            </div>
+            
+        </div>
+    </section>
+    <footer style="padding: 15px 0;">
+		<p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+		
+		<div class="info" >
+			<p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+			<p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+			<p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+		</div>
+	</footer>
+
+    <script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+
+		window.onscroll = function() {myFunction2()};
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+		function myFunction2() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+		}
+	</script>
+
+</body>
+
+</html>

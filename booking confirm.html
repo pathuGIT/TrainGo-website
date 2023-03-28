@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Booking Confirm</title>
+    <style>
+        .detail{
+            height: 90vh;
+            padding-left: 50px;
+            border: 1px solid rgba(255, 0, 0, 0);
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .cimg{
+            width: 300px;
+            position: relative;
+            top: -400px;
+            left: 70%;
+            border: 1px solid rgba(255, 0, 0, 0);
+        }
+        .status{
+            height: 120vh;
+            border: 1px solid rgba(0, 0, 0, 0);
+        }
+        .feild{
+            width: 70%;
+            height: 70vh;
+            overflow: scroll;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 1px solid rgba(0, 0, 0, 0.479);
+            
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th{
+            position: -webkit-sticky; 
+            position: sticky; 
+            top: -1px; 
+            z-index: 100;
+        } 
+        th, td {
+            text-align: left;
+            padding: 8px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+        }
+        
+        tr:nth-child(even){background-color: #f2f2f2}
+        
+        th {
+            background-color: #0c532a;
+            color: white;
+            font-size: 17px;
+        }
+        #btn:hover{
+            background-color: #186b07;
+            color: white;
+        }
+    </style>
+</head>
+<header>
+    <div class="brand" >
+        <li id="logo"><img src="Images/Artboard 142.png"></li>
+        <!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+        <li class="social-icon">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+        </li>
+        
+    </div>
+    <nav class="topnav" id="myTopnav">
+        <ul>
+            <li class="f1">
+                <a href="index.html">Home</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="search.html">Seat Booking</a></li>
+            <li><a href="galary.html">Gallery</a></li>
+            <li><a href="train_shedule.html">Train Schedule</a></li>
+            <li><a href="Ticket_price.html">Ticket Prices</a></li>
+            <li><a href="booking confirm.html">Booking Confirm</a></li>
+            <li><a href="Help.html">Help</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About US</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="detail">
+        <p id="one" style="font-size: 25px; font-family:cursive; width: 700px;">
+            Welcome to our Booking Confirmation page! Here, you can find all the information you need to ensure that your train journey is confirmed and ready to go.
+        </p>
+        <p style="width: 500px;">
+            Our easy-to-use interface allows you to view and manage your booking details in one convenient place. Simply input your booking reference number, and you'll have access to a comprehensive table of all the passengers on your journey, including their names, ages, and seat numbers.
+        </p>
+        <p style="width: 500px;">
+            But this page is more than just a table of information. It's a confirmation of your journey, a reassurance that everything is in place and ready for you to embark on your adventure. From the seat numbers to the date and time of your journey, you'll find all the key details right here. 
+        </p>
+        <p style="width: 500px;">
+            So take a deep breath, relax, and let us take care of the details. Whether you're traveling for business or pleasure, our Booking Confirmation page has everything you need to ensure a comfortable and enjoyable journey. So go ahead and confirm your booking today, and get ready to enjoy the sights and sounds of train travel.
+        </p>
+
+        <div class="cimg">
+            <img style="width:100%" src="Images/check.png" alt="#">
+        </div>
+    </div>
+
+    
+   
+    <div class="status">
+        
+        <h1 style=" margin-left: 100px; font-family:cursive; font-size: 3vw; ">Check Your Order</h1>
+        <h4 style=" margin-left: 100px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; font-weight: 200; ">You Can check your Booking using below the Table.</h4>
+        
+        <div class="searchbox" style="border: 1px solid rgba(255, 0, 0, 0); text-align: center; margin: 0 0 10px 0;">
+            <form action="#">
+               <input style="width: 320px; padding:15px 25px; border-radius: 22px 0 0 22px;" type="text" name="search" id="srch" placeholder="Enter Your Booking ID Here ...">
+               <input id="btn" style="width: 120px; padding:15px 25px; margin: 0 0 0 -3px; border-radius:0 22px 22px 0; cursor: pointer; " type="submit" name="sub" value="Search" onclick="tableSearch()">
+            </form>
+        </div>
+        <div class="feild">
+        <table border="1" id="Tabl">
+            <tr>
+                <th>Booking ID</th>
+                <th>Train Details</th>
+                <th>Passenger Details</th>
+                <th>Seat Numbers</th>
+            </tr>
+            <tr>
+                <td>TGO001</td>
+                <td>Udarta Manike</td>
+                <td>01</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>TGO002</td>
+                <td>Podi Manike</td>
+                <td>02</td>
+                <td>22,21</td>
+            </tr>
+            <tr>
+                <td>TGO003</td>
+                <td>Udarta Manike</td>
+                <td>01</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>TGO004</td>
+                <td>Yal Devi</td>
+                <td>01</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>TGO005</td>
+                <td>Udarta Manike</td>
+                <td>01</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>TGO006</td>
+                <td>Podi Manike</td>
+                <td>01</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>TGO007</td>
+                <td>Yal Devi</td>
+                <td>01</td>
+                <td>89</td>
+            </tr>
+            <tr>
+                <td>TGO008</td>
+                <td>Yal Devi</td>
+                <td>02</td>
+                <td>22,23</td>
+            </tr>
+            <tr>
+                <td>TGO009</td>
+                <td>Podi Manike</td>
+                <td>02</td>
+                <td>45,46</td>
+            </tr>
+            <tr>
+                <td>TGO010</td>
+                <td>Udarta Manike</td>
+                <td>01</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>TGO011</td>
+                <td>Podi Manike</td>
+                <td>01</td>
+                <td>39</td>
+            </tr>
+            <tr>
+                <td>TGO012</td>
+                <td>Yal Devi</td>
+                <td>01</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>TGO013</td>
+                <td>Yal Devi</td>
+                <td>02</td>
+                <td>19,20</td>
+            </tr>
+            <tr>
+                <td>TGO014</td>
+                <td>Udarta Manike</td>
+                <td>01</td>
+                <td>44</td>
+            </tr>
+            <tr>
+                <td>TGO015</td>
+                <td>Yal Devi</td>
+                <td>01</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td>TGO016</td>
+                <td>Udarta Manike</td>
+                <td>02</td>
+                <td>09,10</td>
+            </tr>
+            <tr>
+                <td>TGO017</td>
+                <td>Podi Manike</td>
+                <td>01</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>TGO018</td>
+                <td>Yal Devi</td>
+                <td>01</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>TGO019</td>
+                <td>Yal Devi</td>
+                <td>02</td>
+                <td>29,30</td>
+            </tr>
+            <tr>
+                <td>TGO020</td>
+                <td>Udarta Manike</td>
+                <td>02</td>
+                <td>49,50</td>
+            </tr>
+        </table>
+    </div>
+    <h4 style=" margin-left: 100px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; font-weight: 200; ">If you have any problem, Please <a href="contact_us.html" style="text-decoration: none;">contact us</a> </h4>
+    </div>
+    <footer>
+		<p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+		
+		<div class="info">
+			<p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+			<p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+			<p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+		</div>
+	</footer>
+
+    <script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+
+		window.onscroll = function() {myFunction2()};
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+		function myFunction2() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+		}
+
+		
+	</script>
+
+    <script>
+        function tableSearch(){
+            event.preventDefault();
+
+            let input, filter, table, tr, td, txtValue;
+            input = document.getElementById("srch").value;
+            table = document.getElementById("Tabl");
+            tr = table.getElementsByTagName("tr");
+
+            for(let i = 0; i<tr.length; i++){
+                td = tr[i].getElementsByTagName("td")[0];
+                if(td){
+                    txtValue = td.textContent || td.innerText;
+                    if(txtValue.indexOf(input) > -1){
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

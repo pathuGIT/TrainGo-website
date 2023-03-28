@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .body{
+            margin: 0;
+            font-family: sans-serif;
+
+        }
+
+        .main_section{
+            z-index: -6;
+            width: 100%;
+        }
+
+
+
+        .heading {
+            background-color: rgba(19, 126, 133, 0);
+            text-align: center;
+            font-size: 400%;
+            font-family: times;
+            text-shadow: 7px 5px rgb(223, 223, 223);
+            border: none;
+            position: sticky;
+            top: 0;
+            padding: 10px;
+        }
+
+        .section2 {
+            display: flex;
+        }
+
+        .qab {
+            width: 20%;
+            height: 97vh;
+            position: sticky;
+            top:40px;
+        }
+
+        .box {
+            height: 100%;
+            background-color: rgba(238, 238, 238, 0.425);
+            border: 1px solid #3598b100;
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 12px 30px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .nv_bar h1 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            font-size: 2vw;
+        }
+
+        .nv_bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nv_bar ul li{
+            border-bottom: 1px solid rgba(128, 128, 128, 0.336);
+        }
+
+        .nv_bar li a {
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            padding: 12px 8px;
+            border: none;
+        }
+
+        .nv_bar li a:hover{
+            background-image: linear-gradient(to right, #175974 , #045164);
+            font-weight: 550;
+        }
+
+        .instruct {
+            z-index: -5;
+            margin-top: -50px;
+            width: 80%;
+            background-image: linear-gradient(to right, #ffffff , #f9fdff);
+        }
+
+
+
+        .instruct .h2 {
+            font-size: xx-large;
+            color: #000000;
+            margin: auto;
+            margin-left: 10px;
+            padding: 10px ;
+            padding-top: 50px;
+            border: none;
+            border-top: 1px solid #045164;
+        }
+        .content2{
+            height: 100vh;
+            padding: 0 50px;
+            background-image: linear-gradient(to right, #ffffff , #f9fdff);
+            padding-bottom: 50px;
+            /* background-color: rgb(238, 238, 238); */
+        }
+        .content2 p{
+            font-size: 20px;
+            margin: auto;
+            margin-left: 10px;
+            padding: 10px;
+            padding-top: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .content2 ul li{
+            width: 90%;
+            list-style-type: circle;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        .image {
+            width: 200px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+
+<body class="body">
+    <header>
+		<div class="brand" >
+			<li id="logo"><img src="Images/Artboard 142.png"></li>
+			<!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+			<li class="social-icon">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+			
+		</div>
+		<nav class="topnav" id="myTopnav">
+			<ul>
+				<li class="f1">
+					<a href="index.html">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+				<li><a href="login.html">Sign In</a></li>
+				<li><a href="search.html">Seat Booking</a></li>
+                <li><a href="galary.html">Gallery</a></li>
+				<li><a href="train_shedule.html">Train Schedule</a></li>
+                <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                <li><a href="booking confirm.html">Booking Confirm</a></li>
+				<li><a href="Help.html">Help</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About US</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <section class="main_section" >
+
+        <section class="section2" >
+            <div class="qab">
+                <div class="box">
+                    <div class="nv_bar">
+                        <h1 style="padding-left: 10px;">Content</h1>
+                        <ul>
+                            <li><a href="#at">About trains</a></li>
+                            <li><a href="#tb">Ticket Booking</a></li>
+                            <li><a href="#ts">Train schedules</a></li>
+                            <li><a href="#bt">Bording the train</a></li>
+                            <li><a href="#of">Onboard facilities</a></li>
+                            <li><a href="#ss">Safety and security</a></li>
+                            <li><a href="#e">Etiquette</a></li>
+                            <li><a href="#cs">Customer service</a></li>
+                            <li><a href="#a">Accessibility</a></li>
+                            <li><a href="#ep">Emergency procedures</a></li>
+                            <li><a href="#dp">Disablity Peoples</a></li>
+                            <li><a href="#et">Exiting the train</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="instruct">
+                <div class="content2" id="first" style="text-align: center; background-color: rgb(236, 236, 236); height: 95vh;">
+                    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 3vw; font-weight: 400; text-align: center; padding-top: 50px;">Passenger Instructions</h1>
+                    <div style="position: relative;  left: 50%; transform:translateX(-50%); width:400px; margin-top: -35px;" class="img">
+                        <img style="width:100%" src="Images/backimage2.png" alt="">
+                    </div>
+                    
+                </div>
+
+                <div class="content2" >
+                    <h2 class="h2" id="at">About trains</h2>
+                    <p>In Sri Lanka, the train services offer three classes of travel :</p>
+                    <ul>
+                        <li>
+                            <b>First Class:</b> First-class seats are the most expensive and offer the most
+                            comfortable and spacious seating with air conditioning. This class is available
+                            on selected trains such as the Rajadhani Express, Udarata Menike, and Podi Menike.
+                        </li><br>
+                        <li>
+                            <b>Second Class:</b> Second-class seats are more affordable than first class and offer
+                            comfortable seating with fans. This class is available on all trains and is the
+                            most popular option for most passengers.
+                        </li><br>
+                        <li>
+                            <b>Third Class:</b> Third-class seats are the cheapest option available and offer basic
+                            seating with no fans. This class is available on all trains and is often crowded,
+                            especially during peak travel times.
+                        </li>
+                    </ul>
+                    <p>It's worth noting that some trains may have different classes or seating arrangements,
+                        depending on the route and train type. It's always a good idea to check with the train
+                        service provider or online booking portal for specific details on the classes available
+                        for your chosen journey.</p>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="tb">Ticket Booking</h2>
+                    <p>To book a train ticket on an online website, you can follow these general steps:</p>
+                    <ul>
+                        <li>
+                            <b>Visit to our <i>TrainGo</i>  website:</b> First of all you may need create an
+                            account on our web site or if you already have a <i>TrainGo</i>  account you could
+                            quickly log trough it.
+                        </li><br>
+                        <li><b>Select your trip:</b> Enter your departure station, arrival station, travel and date. You
+                            may also need to specify the number of passengers.
+                        </li><br>
+                        <li>
+                            <b>Choose your train:</b> Based on your search criteria, the website will display a list of
+                            available trains and schedules. Select the train and schedule that suits your needs.
+                        </li><br>
+                        <li>
+                            <b>Choose your seat:</b> If seat selection is available, you can choose your seat preference
+                            from the seating chart displayed on the website.
+                        </li><br>
+                        <li>
+                            <b>Enter passenger details:</b> Enter the name, age, gender, and any other required details
+                            of each passenger.
+                        </li><br>
+                        <li>
+                            <b>Make payment:</b> Choose your preferred payment method and enter your payment details.
+                            Review the details of your booking and confirm your payment.
+                        </li><br>
+                        <li>
+                            <b>Receive your ticket:</b> After your payment is confirmed, the website will generate your
+                            ticket. You can either print the ticket or save it on your mobile device.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="ts">Train Schedule</h2>
+                    <p>How to check train schedules, including departure and arrival times, as well as any delays or
+                        cancellations.</p>
+                    <ul>
+                        <li>The Sri Lanka Railways operates a network of train services throughout the island,
+                            connecting major cities, towns, and villages. The train system is a popular and
+                            affordable mode of transportation in Sri Lanka, offering scenic routes and comfortable
+                            seating options.
+                        </li><br>
+                        <li>There are several types of trains in Sri Lanka, including local, express, and
+                            intercity trains. The schedules, fares, and routes of these trains vary depending
+                            on the destination and type of service.
+                        </li><br>
+                        <li>
+                            It is advisable to check the train schedules in advance and book your tickets early,
+                            especially during peak travel seasons. Train schedules may change from time to time,
+                            so it is also recommended to confirm your travel plans with the train operator or travel
+                            agency.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="bt">Bording the Train</h2>
+                    <p>Instructions on how to find the correct platform and board the train, including what to do
+                        with your luggage and how to find your seat.</p>
+                    <ul>
+                        <li>
+                            When boarding a train in Sri Lanka, you should arrive at the station at least 30 minutes
+                            before the scheduled departure time. It is advisable to have your train ticket ready and
+                            be aware of the platform number and the direction of the train.
+                        </li><br>
+                        <li>
+                            If you have not purchased your ticket in advance, you can purchase it at the ticket
+                            counter located in the station or through online booking services.
+                        </li><br>
+                        <li>
+                            When boarding the train, it is important to follow the instructions of the train conductor
+                            or station staff. Some trains have reserved seating, so make sure to check your ticket for
+                            the correct carriage and seat number.
+                        </li><br>
+                        <li>
+                            Keep your luggage close to you and do not leave it unattended. If you are traveling with a
+                            large amount of luggage, you may need to pay an extra fee for excess baggage.
+
+                        </li><br>
+                        <li>
+                            During the journey, be respectful of your fellow passengers and follow the rules and
+                            regulations of the train operator. Smoking, eating, and drinking are generally not allowed
+                            on trains in Sri Lanka.
+                        </li><br>
+                        <li>
+                            It is also important to be aware of safety precautions, such as holding onto handrails and
+                            avoiding standing near the train doors while the train is in motion.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="of">Onboard Facilities</h2>
+                    <p>Information on the facilities available onboard, such as toilets, food and drink options, and any
+                        entertainment
+                        or Wi-Fi services.
+                    </p>
+                    <p>
+                        The facilities available onboard Sri Lanka trains may vary depending on the type of train
+                        and the class of service. However, here are some general facilities that you can expect.
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Seating:</b> Sri Lanka trains generally offer comfortable seating, with some trains
+                            having both reserved
+                            and unreserved seating options.
+                        </li><br>
+                        <li>
+                            <b>Air Conditioning:</b> Some trains have air conditioning, while others have fans or
+                            natural ventilation. The higher
+                            class carriages usually have air conditioning.
+                        </li>
+                        <li><br>
+                            <b>Toilets:</b> Most Sri Lanka trains have toilets, but the conditions may vary. Some trains
+                            have Western-style toilets, while others have squat toilets.
+                            It is always a good idea to bring your own toilet paper as it may not be available.
+                        </li><br>
+                        <li>
+                            <b>Refreshments:</b> Vendors may walk through the train selling snacks and drinks, but the
+                            options may be limited. It is advisable to bring your own food
+                            and drinks if you have any specific dietary requirements.
+                        </li><br>
+                        <li>
+                            <b>Luggage storage:</b> Some trains have luggage racks or compartments, while others may
+                            have limited space for luggage. It is advisable to keep your luggage
+                            close to you and avoid leaving it unattended.
+                        </li><br>
+                        <li>
+                            <b>Power outlets:</b> Some trains may have power outlets for charging electronic devices,
+                            but they may not always be available or functional.
+                        </li><br>
+                        <li>
+                            <b>Wi-Fi:</b> Wi-Fi is not generally available on Sri Lanka trains.
+                        </li>
+                    </ul>
+                    <p>It is advisable to check the facilities available on your specific train before boarding and plan
+                        accordingly.</p>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="ss">Safety and Security</h2>
+                    <p>Instructions on how to stay safe while traveling on the train, including keeping an eye on your
+                        belongings, not leaving
+                        valuables unattended, and being aware of your surroundings.</p>
+                    <ul>
+                        <li>
+                            <b>Keep an eye on your belongings:</b> Be aware of your surroundings and keep your
+                            belongings close to you at all times.
+                            Do not leave your luggage unattended or keep your valuables in an easily accessible place.
+                        </li><br>
+                        <li>
+                            <b>Be cautious at night:</b> If you are traveling at night, be extra cautious and avoid
+                            walking alone in unfamiliar areas.
+                            Try to stick to well-lit and populated areas.
+                        </li><br>
+                        <li>
+                            <b>Follow safety rules:</b> Always follow the safety rules and regulations of the train
+                            operator. Hold onto handrails when the train is moving and avoid standing near the doors.
+                            If you are traveling with children, keep them close to you at all times.
+                        </li><br>
+                        <li>
+                            <b>Emergency exits:</b> Know the location of the emergency exits and be prepared in case of
+                            an emergency.
+                        </li><br>
+                        <li>
+                            <b>Avoid scams:</b> Be cautious of scams and avoid giving money or personal information to
+                            strangers. If someone approaches you and makes you feel uncomfortable, move away or alert
+                            the train staff.
+                        </li><br>
+                        <li>
+                            <b>Report any suspicious behavior:</b> If you notice any suspicious behavior or activity,
+                            report it to the train staff or authorities immediately.
+                        </li><br>
+                        <li>
+                            <b>Avoid confrontation:</b> Avoid confrontation with other passengers, and try to resolve
+                            any conflicts peacefully. If you feel threatened or
+                            uncomfortable, seek assistance from the train staff.
+                        </li><br>
+                    </ul>
+                    <p>verall, the train system in Sri Lanka is generally safe, but it is always advisable to take
+                        precautions and be aware of your surroundings.</p>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="e">Etiquette</h2>
+                    <p>Guidance on train etiquette, such as keeping noise levels down, not smoking onboard, and
+                        respecting the privacy and personal space of other passengers.</p>
+                    <ul>
+                        <li>
+                            <b>Dress appropriately:</b> Sri Lanka is a conservative country, and it is advisable to
+                            dress modestly, especially when traveling on public transport.
+                            It is recommended to wear comfortable and loose-fitting clothing that covers your
+                            shoulders and knees.
+                        </li><br>
+                        <li>
+                            <b>Be polite:</b> Sri Lankans are generally friendly and hospitable, and it is important to
+                            reciprocate this kindness. Greet your fellow passengers with a smile and be courteous when
+                            asking for assistance.
+                        </li><br>
+                        <li>
+                            <b>Offer your seat:</b> It is considered polite to offer your seat to the elderly, disabled,
+                            pregnant women, or passengers with young children.
+                        </li><br>
+                        <li>
+                            <b>Keep the noise level low:</b> Be mindful of the noise level, especially if you are
+                            traveling in a quiet carriage. Avoid loud conversations or
+                            playing music without headphones.
+                        </li><br>
+                        <li>
+                            <b>Keep the train clean:</b> Dispose of any trash in the designated bins and keep the train
+                            clean. Avoid eating messy food that may leave a mess
+                            or odor.
+                        </li><br>
+                        <li>
+                            <b>Do not smoke:</b> Smoking is not allowed on Sri Lanka trains, so it is important to
+                            refrain from smoking or using tobacco products while on
+                            board.
+                        </li><br>
+                        <li>
+                            <b>Respect cultural norms:</b> Sri Lanka has a rich cultural heritage, and it is important
+                            to respect the cultural norms and values of the country.
+                            Avoid any behavior that may be considered disrespectful or offensive.
+                        </li>
+                    </ul>
+                    <p>Overall, it is important to be respectful and considerate of your fellow passengers when
+                        traveling on Sri Lanka trains. By following these etiquette guidelines,
+                        you can make your journey more pleasant for yourself and others.</p>
+                </div>
+
+
+                <div class="content2">
+                    <h2 class="h2" id="cs">Customer Service</h2>
+                    <p>How to get help if you have any problems or concerns during your journey, including contacting
+                        train staff or customer service representatives.</p>
+                    <ul>
+                        <li>
+                            <b>Ticket booking:</b> You can book train tickets in advance online or at the train station
+                            ticket counters. Some trains have reserved seating options,
+                            and it is advisable to book in advance to secure a seat.
+                        </li><br>
+                        <li>
+                            <b>Information desk:</b> Most train stations have an information desk or help desk where you
+                            can get information about train schedules, fares, and any other
+                            queries related to train travel.
+                        </li><br>
+                        <li>
+                            <b>On-board staff:</b> Sri Lankan trains have on-board staff who can assist you with any
+                            questions or concerns during your journey. The staff may include ticket
+                            collectors, train guards, and other personnel.
+                        </li><br>
+                        <li>
+                            <b>Accessibility:</b> Sri Lanka trains have some provisions for passengers with
+                            disabilities, such as ramps and designated seating areas. If you require any special
+                            assistance, you can inform the train staff in advance.
+                        </li><br>
+                        <li>
+                            <b>Complaints and feedback:</b> If you have any complaints or feedback about your train
+                            journey, you can contact the train operator's customer service department.
+                            You can also fill out a feedback form available on the train or at the train station.
+                        </li><br>
+                        <li>
+                            <b>Lost and found:</b> If you have lost any items during your train journey, you can contact
+                            the train operator's lost and found department to report the lost items.
+                        </li>
+                    </ul>
+                    <p>Overall, Sri Lankan trains offer some customer services to ensure a comfortable and safe journey
+                        for passengers. If you have any queries or concerns, do not hesitate to
+                        approach the train staff for assistance.</p>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="a">Accessibility</h2>
+                    <p>Information on accessibility options for passengers with disabilities, including wheelchair
+                        access and assistance with boarding and disembarking.</p>
+                    <ul>
+                        <li>
+                            <b>Ramps and designated seating:</b> Sri Lanka trains have designated seating areas for
+                            passengers with disabilities, and some trains have ramps
+                            to facilitate boarding for wheelchair users.
+                        </li><br>
+                        <li>
+                            <b>Assistance from staff:</b> If you require any special assistance, such as boarding or
+                            disembarking the train, you can inform the train staff
+                            in advance, and they will provide assistance.
+                        </li><br>
+                        <li>
+                            <b>Signage:</b> Some Sri Lanka train stations have signage indicating accessible facilities
+                            and services.
+                        </li><br>
+                        <li>
+                            <b>Limited accessibility:</b> It is important to note that not all Sri Lanka trains and
+                            train stations are fully accessible, and some may
+                            have limited accessibility features.
+                        </li><br>
+                        <li>
+                            <b>Future plans:</b> The Sri Lankan government has announced plans to improve the
+                            accessibility of trains and train stations, including
+                            the installation of elevators and escalators in major train stations and the introduction of
+                            accessible toilets on trains.
+                        </li><br>
+                    </ul>
+                    <p>Overall, Sri Lanka trains are working towards improving accessibility for passengers with
+                        disabilities. If you require any special
+                        assistance, it is advisable to inform the train staff in advance, and they will do their
+                        best to provide the necessary assistance.</p>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="ep">Emergency Procedures</h2>
+                    <p>Instructions on what to do in case of an emergency, such as a fire or medical emergency, and how
+                        to contact the train staff or emergency
+                        services if necessary.</p>
+                    <ul>
+                        <li>
+                            <b>Emergency stop button:</b> In case of an emergency, Sri Lanka trains have an emergency
+                            stop button located in each carriage.
+                            Passengers can use this button to stop the train in case of an emergency.
+                        </li><br>
+                        <li>
+                            <b>Emergency exits:</b> Sri Lanka trains have emergency exits located in each carriage.
+                            These exits are clearly marked, and
+                            passengers can use them in case of an emergency.
+                        </li><br>
+                        <li>
+                            <b>Communication systems:</b> Sri Lanka trains have communication systems, such as intercoms
+                            or emergency phones, that passengers
+                            can use to contact the train staff or emergency services in case of an emergency.
+                        </li><br>
+                        <li>
+                            <b>Evacuation procedures:</b> In case of an emergency, the train staff will provide
+                            instructions on the evacuation procedures.
+                            Passengers should follow these instructions and evacuate the train as quickly and safely
+                            as possible.
+                        </li><br>
+                        <li>
+                            <b>First aid:</b> Sri Lanka trains have first aid kits on board, and the train staff are
+                            trained in basic first aid. In case of an emergency,
+                            the train staff can provide basic first aid until medical services arrive.
+                        </li><br>
+                        <li>
+                            <b>Reporting incidents:</b> If you witness or are involved in an emergency or incident on
+                            the train, you should report it to the train
+                            staff or emergency services as soon as possible.
+                        </li><br>
+                    </ul>
+                    <p>Overall, Sri Lanka trains have emergency procedures in place to ensure the safety of passengers
+                        in case of an emergency.
+                        It is important to follow the instructions of the train staff and stay calm during an
+                        emergency. If you witness or are involved in an incident, it is important to report it to
+                        the appropriate authorities.</p>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="dp">Disablity Peoples</h2>
+                    <p>Sri Lanka trains offer some provisions for passengers with disabilities. If you require any
+                        special assistance, inform the train staff in
+                        advance, and they will assist you with your needs to ensure a comfortable and safe journey.</p>
+                    <ul>
+                        <li>
+                            <b>Inform the train staff:</b> If you require any special assistance, such as boarding or
+                            disembarking the train,
+                            or have any other specific needs related to your disability, inform the train staff in
+                            advance. They will assist you with your needs to ensure a comfortable journey.
+                        </li><br>
+                        <li>
+                            <b>Designated seating:</b> Sri Lanka trains have designated seating areas for passengers
+                            with disabilities. If you require
+                            a designated seat, inform the train staff, and they will provide you with a seat.
+                        </li><br>
+                        <li>
+                            <b>Ramps and boarding assistance:</b> ome Sri Lanka trains have ramps to facilitate boarding
+                            for
+                            wheelchair users, and train staff can provide boarding assistance if needed. Inform the
+                            train staff in advance if you require any special assistance.
+                        </li><br>
+                        <li>
+                            <b>Accessibility of train stations:</b> Not all Sri Lanka train stations are fully
+                            accessible.
+                            Check the accessibility of the station before you plan your journey.
+                        </li><br>
+                        <li>
+                            <b>Communication with train staff:</b> If you have any concerns or issues during your
+                            journey,
+                            communicate with the train staff. They will assist you with your needs.
+                        </li><br>
+                        <li>
+                            <b>Emergency procedures:</b> If an emergency arises during the journey, follow the
+                            instructions
+                            of the train staff and evacuate the train as quickly and safely as possible.
+                        </li><br>
+                        <li>
+                            <b>Traveling with a caregiver:</b> If you require the assistance of a caregiver, they can
+                            travel with you on the train, but they must purchase a separate ticket.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content2">
+                    <h2 class="h2" id="et">Exiting the Train</h2>
+                    <p>Instructions on how to exit the train at your destination, including how to find the exit and any
+                        customs or immigration requirements if applicable.</p>
+                    <ul>
+                        <li>
+                            <b>Listen for announcements:</b> Sri Lanka train staff will make announcements about the
+                            next station or stop. Listen carefully for these announcements and prepare to disembark
+                            accordingly.
+                        </li><br>
+                        <li>
+                            <b>Check your belongings:</b> Before exiting the train, make sure you have all your
+                            belongings with you, including any luggage or personal items.
+                        </li><br>
+                        <li>
+                            <b>Move towards the exit:</b> As the train approaches the station or stop,
+                            move towards the exit and be prepared to disembark.
+                        </li><br>
+                        <li>
+                            <b>Be aware of other passengers:</b> Be aware of other passengers around
+                            you and avoid blocking the exit or hindering the movement of others.
+                        </li><br>
+                        <li>
+                            <b>Mind the gap:</b> Be careful while disembarking and watch your step,
+                            as there may be a gap between the train and the platform.
+                        </li><br>
+                        <li>
+                            <b>Follow the signs and instructions:</b> Follow the signs and
+                            instructions provided by the train staff for disembarking the train.
+                            They may direct you to specific exits or platforms.
+                        </li><br>
+                        <li>
+                            <b>Do not rush:</b> While disembarking the train, do not rush or
+                            push, as this can cause accidents or injuries.
+                        </li><br>
+                        <li>
+                            <b>Use caution at night:</b> If you are disembarking the train at
+                            night, use extra caution and ensure that you have a clear path to the exit.
+                        </li><br>
+                    </ul>
+                    <p style="border:1px solid rgba(255, 0, 0, 0.356); text-align: justify; font-size: 17px; background-color: #faf2c6;">Overall, disembarking the train in Sri Lanka requires passengers to be
+                        aware of their surroundings, listen for announcements, and follow the
+                        instructions provided by the train staff. By doing so, passengers can ensure
+                        a safe and comfortable exit from the train.</p>
+                </div>
+                
+            </div>
+        </section>
+        
+        <footer style="margin-top: 5px;">
+            <p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+            
+            <div class="info">
+                <p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+                <p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+                <p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+            </div>
+        </footer>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+
+            window.onscroll = function() {myFunction2()};
+            var navbar = document.getElementById("myTopnav");
+            var sticky = navbar.offsetTop;
+            function myFunction2() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+        </script>
+</body>
+
+</html>

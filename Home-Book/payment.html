@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <title>Payment Page</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+                outline: none;
+                border: none;
+                text-transform: capitalize;
+                transition: all .2s linear;
+            }
+
+            .container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 25px;
+                min-height: 100vh;
+                padding-bottom: 70px;
+            }
+
+            .container form{
+                padding: 20px;
+                width: 700px;
+                background: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+            }
+
+            .container form .row{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .container form .row .col{
+                flex: 1 1 250px;
+            }
+
+            .container form .row .col .title{
+                font-size: 20px;
+                color: #333;
+                padding-bottom: 5px;
+                text-transform: uppercase;
+            }
+
+            .container form .row .col .inputBox{
+                margin: 15px 0;
+            }
+
+            .container form .row .col .inputBox span{
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            .container form .row .col .inputBox input{
+                    width: 100%;
+                    border: 1px solid #ccc;
+                    padding: 10px 15px;
+                    font-size: 15px;
+                    text-transform: none;
+            }
+
+            .container form .row .col .inputBox input:focus{
+                border: 1px solid #000;
+            }
+
+            .container form .row .col .flex{
+                display: flex;
+                gap: 15px;
+            }
+
+            .container form .row .col .flex .inputBox{
+                margin-top: 5px;
+            }
+
+            .container form .row .col .inputBox img{
+                height: 34px;
+                margin-top: 5px;
+                filter: drop-shadow(0 0 1px #000);
+            }
+
+            .container form .submit-btn{
+                width: 100%;
+                padding: 12px;
+                font-size: 17px;
+                background: #27ae60;
+                color: #fff;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+
+            .container form .submit-btn:hover{
+                background: #2ecc71;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            
+            <span id="err" style="color: red; border: 1px solid rgba(255, 0, 0, 0); padding: 5px 0 -20px 10px; margin-top: 10px; position: absolute;left: 50%; top: 90%; transform: translateX(-50%); height: 30px; font-weight: 700;"></span>
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="title">Billing Address</h3>
+                        <div class="inputBox">
+                            <span>Full Name :</span>
+                            <input type="text" name="" id="name" placeholder="peter pan">
+                        </div>
+                        <div class="inputBox">
+                            <span>Email :</span>
+                            <input type="email" name="" id="email" placeholder="example@example.com">
+                        </div>
+                        <div class="inputBox">
+                            <span>Address :</span>
+                            <input type="text" name="" id="address" placeholder="number - street - locality">
+                        </div>
+                        <div class="inputBox">
+                            <span>City :</span>
+                            <input type="text" name="" id="city" placeholder="Kadawatha">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>State :</span>
+                                <input type="text" name="" id="state" placeholder="Western">
+                            </div>
+                            <div class="inputBox">
+                                <span>Zip Code :</span>
+                                <input type="text" name="" id="zipc" placeholder="12345">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="title">Payment</h3>
+
+                        <div class="inputBox">
+                            <span>Cards Accepted :</span>
+                            <img src="Images/card_img.png" alt="cards">
+                        </div>
+                        <div class="inputBox">
+                            <span>Name on card :</span>
+                            <input type="text" name="" id="cname" placeholder="mr.peter pan">
+                        </div>
+                        <div class="inputBox">
+                            <span>Credit Card Number :</span>
+                            <input type="text" name="" id="cnum" placeholder="0000-0000-0000-0000">
+                        </div>
+                        <div class="inputBox">
+                            <span>Exp Month :</span>
+                            <input type="number" name="" id="cm" placeholder="01">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Exp Year :</span>
+                                <input type="number" name="" id="cy" placeholder="2023">
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV Code :</span>
+                                <input type="text" name="" id="ccode" placeholder="1234">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Proceed to Ckeckout" class="submit-btn" onclick="checkFun()">
+            </form>
+        </div>
+        <script>
+            function checkFun(){
+                event.preventDefault();
+
+                var name = document.getElementById("name").value;
+                var address = document.getElementById("address").value;
+                var email = document.getElementById("email").value;
+                var city = document.getElementById("city").value;
+                var state = document.getElementById("state").value;
+                var zipc = document.getElementById("zipc").value;
+                var cname = document.getElementById("cname").value;
+                var cnum = document.getElementById("cnum").value;
+                var cm = document.getElementById("cm").value;
+                var cy= document.getElementById("cy").value;
+                var ccode = document.getElementById("ccode").value;
+
+                if(name == "" || address == "" || email == "" || city == "" || state == "" || zipc =="" || cname == "" || cnum == "" || cm == "" || cy=="" || ccode==""){
+                    document.getElementById("err").innerHTML = "Filling the all input feild.";
+                }else{
+                    if(cnum < 999999999999999){
+                        document.getElementById("err").innerHTML = "Your card number shoud be iclude 16 numbers.";
+                    }else if(cm > 12){
+                        document.getElementById("err").innerHTML = "Not Valid Month.";
+                    }else if(ccode > 9999){
+                        document.getElementById("err").innerHTML = "Not Valid CCV Number.";
+                    }else{
+                        window.location.href = "payement-output.html";
+                    }
+                }
+                
+            }
+        </script>
+    </body>
+</html>

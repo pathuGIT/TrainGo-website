@@ -1,0 +1,572 @@
+<html>
+    <head>
+        <title>Seat Booking</title>
+        <script src="https://kit.fontawesome.com/71ab0dabd2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                font-family: 'Poppines', sans-serif;
+            }
+
+            .main{
+                height: 100vh;
+            }
+            .container{
+                position: relative;
+                left: 50%;
+                top: 45%;
+                transform: translateX(-50%) translateY(-50%);
+                max-width: 650px;
+                padding: 28px;
+                margin: 0 28px;
+                box-shadow: 0 15px 20px #ABB2B9;
+                box-sizing: border-box;
+            }
+
+            h2{
+                font-size: 26px;
+                font-weight: 600;
+                text-align: left;
+                color: #2f4f4f;
+                padding-bottom: 8px;
+                border-bottom: 1px solid rgb(150, 150, 150);
+            }
+
+            .contentt{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 20px 0;
+                height: 250px;
+                box-sizing: border-box;
+            }
+
+            .input-box{
+                display: flex;
+                flex-wrap: wrap;
+                width: 50%;
+                padding-bottom: 15px;
+            }
+
+            .input-box:nth-child(2n){
+                justify-content: end;
+            }
+
+            .input-box label{
+                width: 95%;
+                color: #2f4f4f;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+
+            .input-box select{
+                height: 40px;
+                width: 95%;
+                padding: 0 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                outline: none;
+            }
+
+            .input-box input:is(:focus, :valid){
+                box-shadow: 0 3px 6px #ABB2B9;
+            }
+
+            .input-box input{
+                height: 40px;
+                width: 95%;
+                padding: 0 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                outline: none;
+            }
+
+            .button-container{
+                margin: 15px 0;
+            }
+
+            .button-container #button{
+                cursor: pointer;
+                width: 200%;
+                margin-top: 10px;
+                padding: 10px;
+                display: block;
+                font-size: 20px;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                background-image: linear-gradient(to right, #aa076b, #61045f);
+            }
+
+            .button-container #button:hover{
+                background-image: linear-gradient(to right, #61045f, #aa076b);
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(255, 255, 255);">
+        <header>
+            <div class="brand" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <li id="logo"><img src="Images/Artboard 142.png"></li>
+                <!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+                <li class="social-icon">
+					<a href=""><i class="fab fa-facebook-f"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+				</li>
+                
+            </div>
+            
+        </header>
+        <main class="main">
+        <div class="container">
+            <form action="" onsubmit="return Funerr()">
+                <h2>BOOK YOUR SEAT NOW</h2>
+                <span id="demo" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: red; text-align: center; "></span>
+                <div class="contentt">
+                    <div class="input-box">
+                        <label for="from">From</label>
+                        <select name="from" id="from">
+                            <option value="Choose Station">Choose Station</option>
+									<option value="ADAGALA">ADAGALA</option>
+									<option value="AGBOPURA">AGBOPURA</option>
+									<option value="AHANGAMA">AHANGAMA</option>
+									<option value="AHUNGALLE">AHUNGALLE</option>
+									<option value="AKURALA">AKURALA</option>
+									<option value="ALAWATUPITIYA">ALAWATUPITIYA</option>
+									<option value="ALAWWA">ALAWWA</option>
+									<option value="ALUTH AMBALAMA">ALUTH AMBALAMA</option>
+									<option value="ALUTHGAMA">ALUTHGAMA</option>
+									<option value="AMBALANGODA">AMBALANGODA</option>
+									<option value="AMBEWELA">AMBEWELA</option>
+									<option value="AMBEYPUSSA">AMBEYPUSSA</option>
+									<option value="ANAWILUNDAWA">ANAWILUNDAWA</option>
+									<option value="ANDADOLA">ANDADOLA</option>
+									<option value="ANGAMPITIYA">ANGAMPITIYA</option>
+									<option value="ANGULANA">ANGULANA</option>
+									<option value="ANURADHAPURA">ANURADHAPURA</option>
+									<option value="BALAPITIYA">BALAPITIYA</option>
+									<option value="BAMBALAPITIYA">BAMBALAPITIYA</option>
+									<option value="BAMBARENDA">BAMBARENDA</option>
+									<option value="BANDARAWELA">BANDARAWELA</option>
+									<option value="Bandirippuwa">Bandirippuwa</option>
+									<option value="BANGADENIYA">BANGADENIYA</option>
+									<option value="BASELINE ROAD">BASELINE ROAD</option>
+									<option value="BATTALUOYA">BATTALUOYA</option>
+									<option value="BATTICALOA">BATTICALOA</option>
+									<option value="BOLAWATTE">BOLAWATTE</option>
+									<option value="BOOSSA">BOOSSA</option>
+									<option value="CHEDDIIKULAM">CHEDDIIKULAM</option>
+									<option value="CHILAW">CHILAW</option>
+									<option value="CHINA BEY">CHINA BEY</option>
+									<option value="CHUNNAKAM">CHUNNAKAM</option>
+									<option value="COLOMBO FORT">COLOMBO FORT</option>
+									<option value="COTTA ROAD">COTTA ROAD</option>
+									<option value="DARALUWA">DARALUWA</option>
+									<option value="DEHIWALA">DEHIWALA</option>
+									<option value="Dekinda">Dekinda</option>
+									<option value="DEMATAGODA">DEMATAGODA</option>
+									<option value="DEMODARA">DEMODARA</option>
+									<option value="DEWAPURAM">DEWAPURAM</option>
+									<option value="DEWEDDA">DEWEDDA</option>
+									<option value="DIYATALAWA">DIYATALAWA</option>
+									<option value="DODANDUWA">DODANDUWA</option>
+									<option value="EGODA UYANA">EGODA UYANA</option>
+									<option value="GALLE">GALLE</option>
+									<option value="GALLELLA">GALLELLA</option>
+									<option value="GALOYA JUNCTION">GALOYA JUNCTION</option>
+									<option value="GAMMANA">GAMMANA</option>
+									<option value="GANEGODA">GANEGODA</option>
+									<option value="GANEMULLA">GANEMULLA</option>
+									<option value="GANEWATTE">GANEWATTE</option>
+									<option value="Gangathilaka">Gangathilaka</option>
+									<option value="GANGODA">GANGODA</option>
+									<option value="GODAGAMA">GODAGAMA</option>
+									<option value="GREAT WESTERN">GREAT WESTERN</option>
+									<option value="HABARADUWA">HABARADUWA</option>
+									<option value="HABARANA">HABARANA</option>
+									<option value="HATAMUNA">HATAMUNA</option>
+									<option value="HATARAS KOTUWA">HATARAS KOTUWA</option>
+									<option value="HATTON">HATTON</option>
+									<option value="HINGURAKGODA">HINGURAKGODA</option>
+									<option value="HINGURALA">HINGURALA</option>
+									<option value="HIRIYALA">HIRIYALA</option>
+									<option value="HOMAGAMA">HOMAGAMA</option>
+									<option value="HYINPOR">HYINPORT</option>
+									<option value="IDALGASINNA">IDALGASINNA</option>
+									<option value="IHALAGAMA">IHALAGAMA</option>
+									<option value="IHALAKOTTE">IHALAKOTTE</option>
+									<option value="JA-ELA">JA-ELA</option>
+									<option value="JAFFNA">JAFFNA</option>
+									<option value="JAYANTHIPURA">JAYANTHIPURA</option>
+									<option value="KADADASI NAGAR">KADADASI NAGAR</option>
+									<option value="KADIGAMUWA">KADIGAMUWA</option>
+									<option value="KALAWEWA">KALAWEWA</option>
+									<option value="KALKUDAH">KALKUDAH</option>
+									<option value="KALUTARA NORTH">KALUTARA NORTH</option>
+									<option value="KANDEGODA">KANDEGODA</option>
+									<option value="KANDY">KANDY</option>
+									<option value="KANKESANTHURAI">KANKESANTHURAI</option>
+									<option value="KANTALE">KANTALE</option>
+									<option value="KAPUWATTE">KAPUWATTE</option>
+									<option value="KATTUWA">KATTUWA</option>
+									<option value="KATUGASTOTA">KATUGASTOTA</option>
+									<option value="KEKIRAWA">KEKIRAWA</option>
+									<option value="KOGGALA">KOGGALA</option>
+									<option value="KOHOMBILIWALA">KOHOMBILIWALA</option>
+									<option value="KOKUVIL">KOKUVIL</option>
+									<option value="KOLLUPITIYA">KOLLUPITIYA</option>
+									<option value="KOLONNAWA">KOLONNAWA</option>
+									<option value="KOLONNAWA">KOLONNAWA</option>
+									<option value="KOMPANNAVEDIYA">KOMPANNAVEDIYA</option>
+									<option value="KONDAVIL">KONDAVIL</option>
+									<option value="KUDA WAWA">KUDA WAWA</option>
+									<option value="KUDAHAKAPOLA">KUDAHAKAPOLA</option>
+									<option value="KUMARAKANDA">KUMARAKANDA</option>
+									<option value="LUNUWILA">LUNUWILA</option>
+									<option value="MADAMPAGAMA">MADAMPAGAMA</option>
+									<option value="MADAMPE">MADAMPE</option>
+									<option value="MADHU ROAD">MADHU ROAD</option>
+									<option value="MADURANKULIYA">MADURANKULIYA</option>
+									<option value="MAHO">MAHO</option>
+									<option value="MAKUMBURA">MAKUMBURA</option>
+									<option value="MALLAKAM">MALLAKAM</option>
+									<option value="MANAMPITIYA">MANAMPITIYA</option>
+									<option value="MANGALAELIYA">MANGALAELIYA</option>
+									<option value="MANKULAM">MANKULAM</option>
+									<option value="MANNAR">MANNAR</option>
+									<option value="MANUWANGAMA">MANUWANGAMA</option>
+									<option value="MATHOTTAM">MATHOTTAM</option>
+									<option value="MAVILMADA">MAVILMADA</option>
+									<option value="MAVITTAPURAM">MAVITTAPURAM</option>
+									<option value="MIDIGAMA">MIDIGAMA</option>
+									<option value="MIHINTALE">MIHINTALE</option>
+									<option value="MIHINTALE JUNCTION">MIHINTALE JUNCTION</option>
+									<option value="MINNERIYA">MINNERIYA</option>
+									<option value="MIRIGAMA">MIRIGAMA</option>
+									<option value="MIRIHANPITIGAMA">MIRIHANPITIGAMA</option>
+									<option value="MURIKANDY">MURIKANDY</option>
+									<option value="MURUNKAN">MURUNKAN</option>
+									<option value="MUTHTHETTUGALA">MUTHTHETTUGALA</option>
+									<option value="NEGAMA">NEGAMA</option>
+									<option value="NEGOMBO">NEGOMBO</option>
+									<option value="NELUMPATHGAMA">NELUMPATHGAMA</option>
+									<option value="NELUMPOKUNA">NELUMPOKUNA</option>
+									<option value="NERIYAKULAM">NERIYAKULAM</option>
+									<option value="NOORANAGAR">NOORANAGAR</option>
+									<option value="NUGEGODA">NUGEGODA</option>
+									<option value="OHIYA">OHIYA</option>
+									<option value="OMANTHAI">OMANTHAI</option>
+									<option value="PADUKKA">PADUKKA</option>
+									<option value="PANALEEYA">PANALEEYA</option>
+									<option value="PANGIRIWATTA">PANGIRIWATTA</option>
+									<option value="PANNIPITIYA">PANNIPITIYA</option>
+									<option value="PARAKUMUYANA">PARAKUMUYANA</option>
+									<option value="PARANTHAN">PARANTHAN</option>
+									<option value="PARASANGAHAWEWA">PARASANGAHAWEWA</option>
+									<option value="RAMBUKKANA">RAMBUKKANA</option>
+									<option value="RANAMUGGAMUWA">RANAMUGGAMUWA</option>
+									<option value="RANDENIGAMA">RANDENIGAMA</option>
+									<option value="RATHGAMA">RATHGAMA</option>
+									<option value="RATMALANA">RATMALANA</option>
+									<option value="REDEETHENNA">REDEETHENNA</option>
+									<option value="RICHMOND HILL">RICHMOND HILL</option>
+									<option value="ROSELLA">ROSELLA</option>
+									<option value="SALIYAPURA">SALIYAPURA</option>
+									<option value="SANKATHANAI">SANKATHANAI</option>
+									<option value="SARASAVIUYANA">SARASAVIUYANA</option>
+									<option value="SAWARANA">SAWARANA</option>
+									<option value="SECRETARTAT HALT">SECRETARTAT HALT</option>
+									<option value="SEEDUWA">SEEDUWA</option>
+									<option value="TALAWATTEGEDARA">TALAWATTEGEDARA</option>
+									<option value="TAWALANOYA">TAWALANOYA</option>
+									<option value="TELLIPALLAI">TELLIPALLAI</option>
+									<option value="TELWATTE">TELWATTE</option>
+									<option value="TEMBLIGALA">TEMBLIGALA</option>
+									<option value="THACHANTHOPPU">THACHANTHOPPU</option>
+									<option value="THALPE">THALPE</option>
+									<option value="THAMBAGALLA">THAMBAGALLA</option>
+									<option value="Thambalagamuwa">Thambalagamuwa</option>
+									<option value="THAMBUTTEGAMA">THAMBUTTEGAMA</option>
+									<option value="THANDIKULAM">THANDIKULAM</option>
+									<option value="THIIRUKETHEESWARAM">THIIRUKETHEESWARAM</option>
+									<option value="THILLADIYA">THILLADIYA</option>
+									<option value="THIRANAGAMA">THIRANAGAMA</option>
+									<option value="THODDAVELI">THODDAVELI</option>
+									<option value="Urugodawattha">Urugodawattha</option>
+									<option value="UYANGALLA">UYANGALLA</option>
+									<option value="VALACHCHENEI">VALACHCHENEI</option>
+									<option value="VANDARAMULLAI">VANDARAMULLAI</option>
+									<option value="VAVUNIYA">VAVUNIYA</option>
+									<option value="VEYANGODA">VEYANGODA</option>
+									<option value="VIRALMURIPPUWA">VIRALMURIPPUWA</option>
+									<option value="WADDUWA">WADDUWA</option>
+									<option value="WAGA">WAGA</option>
+									<option value="WAIKKALA">WAIKKALA</option>
+									<option value="WALAHAPITIYA">WALAHAPITIYA</option>
+									<option value="WALASWEWA">WALASWEWA</option>
+									<option value="WALGAMA">WALGAMA</option>
+									<option value="WALPOLA">WALPOLA</option>
+									<option value="WANAWASALA">WANAWASALA</option>
+									<option value="WANDURAWA">WANDURAWA</option>
+									<option value="YATAWARA">YATAWARA</option>
+									<option value="YATIRAWANA">YATIRAWANA</option>
+									<option value="YATTALGODA">YATTALGODA</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="to">To</label>
+                        <select name="to" id="to">
+                            <option value="Choose Station">Choose Station</option>
+									<option value="ADAGALA">ADAGALA</option>
+									<option value="AGBOPURA">AGBOPURA</option>
+									<option value="AHANGAMA">AHANGAMA</option>
+									<option value="AHUNGALLE">AHUNGALLE</option>
+									<option value="AKURALA">AKURALA</option>
+									<option value="ALAWATUPITIYA">ALAWATUPITIYA</option>
+									<option value="ALAWWA">ALAWWA</option>
+									<option value="ALUTH AMBALAMA">ALUTH AMBALAMA</option>
+									<option value="ALUTHGAMA">ALUTHGAMA</option>
+									<option value="AMBALANGODA">AMBALANGODA</option>
+									<option value="AMBEWELA">AMBEWELA</option>
+									<option value="AMBEYPUSSA">AMBEYPUSSA</option>
+									<option value="ANAWILUNDAWA">ANAWILUNDAWA</option>
+									<option value="ANDADOLA">ANDADOLA</option>
+									<option value="ANGAMPITIYA">ANGAMPITIYA</option>
+									<option value="ANGULANA">ANGULANA</option>
+									<option value="ANURADHAPURA">ANURADHAPURA</option>
+									<option value="BALAPITIYA">BALAPITIYA</option>
+									<option value="BAMBALAPITIYA">BAMBALAPITIYA</option>
+									<option value="BAMBARENDA">BAMBARENDA</option>
+									<option value="BANDARAWELA">BANDARAWELA</option>
+									<option value="Bandirippuwa">Bandirippuwa</option>
+									<option value="BANGADENIYA">BANGADENIYA</option>
+									<option value="BASELINE ROAD">BASELINE ROAD</option>
+									<option value="BATTALUOYA">BATTALUOYA</option>
+									<option value="BATTICALOA">BATTICALOA</option>
+									<option value="BOLAWATTE">BOLAWATTE</option>
+									<option value="BOOSSA">BOOSSA</option>
+									<option value="CHEDDIIKULAM">CHEDDIIKULAM</option>
+									<option value="CHILAW">CHILAW</option>
+									<option value="CHINA BEY">CHINA BEY</option>
+									<option value="CHUNNAKAM">CHUNNAKAM</option>
+									<option value="COLOMBO FORT">COLOMBO FORT</option>
+									<option value="COTTA ROAD">COTTA ROAD</option>
+									<option value="DARALUWA">DARALUWA</option>
+									<option value="DEHIWALA">DEHIWALA</option>
+									<option value="Dekinda">Dekinda</option>
+									<option value="DEMATAGODA">DEMATAGODA</option>
+									<option value="DEMODARA">DEMODARA</option>
+									<option value="DEWAPURAM">DEWAPURAM</option>
+									<option value="DEWEDDA">DEWEDDA</option>
+									<option value="DIYATALAWA">DIYATALAWA</option>
+									<option value="DODANDUWA">DODANDUWA</option>
+									<option value="EGODA UYANA">EGODA UYANA</option>
+									<option value="GALLE">GALLE</option>
+									<option value="GALLELLA">GALLELLA</option>
+									<option value="GALOYA JUNCTION">GALOYA JUNCTION</option>
+									<option value="GAMMANA">GAMMANA</option>
+									<option value="GANEGODA">GANEGODA</option>
+									<option value="GANEMULLA">GANEMULLA</option>
+									<option value="GANEWATTE">GANEWATTE</option>
+									<option value="Gangathilaka">Gangathilaka</option>
+									<option value="GANGODA">GANGODA</option>
+									<option value="GODAGAMA">GODAGAMA</option>
+									<option value="GREAT WESTERN">GREAT WESTERN</option>
+									<option value="HABARADUWA">HABARADUWA</option>
+									<option value="HABARANA">HABARANA</option>
+									<option value="HATAMUNA">HATAMUNA</option>
+									<option value="HATARAS KOTUWA">HATARAS KOTUWA</option>
+									<option value="HATTON">HATTON</option>
+									<option value="HINGURAKGODA">HINGURAKGODA</option>
+									<option value="HINGURALA">HINGURALA</option>
+									<option value="HIRIYALA">HIRIYALA</option>
+									<option value="HOMAGAMA">HOMAGAMA</option>
+									<option value="HYINPOR">HYINPORT</option>
+									<option value="IDALGASINNA">IDALGASINNA</option>
+									<option value="IHALAGAMA">IHALAGAMA</option>
+									<option value="IHALAKOTTE">IHALAKOTTE</option>
+									<option value="JA-ELA">JA-ELA</option>
+									<option value="JAFFNA">JAFFNA</option>
+									<option value="JAYANTHIPURA">JAYANTHIPURA</option>
+									<option value="KADADASI NAGAR">KADADASI NAGAR</option>
+									<option value="KADIGAMUWA">KADIGAMUWA</option>
+									<option value="KALAWEWA">KALAWEWA</option>
+									<option value="KALKUDAH">KALKUDAH</option>
+									<option value="KALUTARA NORTH">KALUTARA NORTH</option>
+									<option value="KANDEGODA">KANDEGODA</option>
+									<option value="KANDY">KANDY</option>
+									<option value="KANKESANTHURAI">KANKESANTHURAI</option>
+									<option value="KANTALE">KANTALE</option>
+									<option value="KAPUWATTE">KAPUWATTE</option>
+									<option value="KATTUWA">KATTUWA</option>
+									<option value="KATUGASTOTA">KATUGASTOTA</option>
+									<option value="KEKIRAWA">KEKIRAWA</option>
+									<option value="KOGGALA">KOGGALA</option>
+									<option value="KOHOMBILIWALA">KOHOMBILIWALA</option>
+									<option value="KOKUVIL">KOKUVIL</option>
+									<option value="KOLLUPITIYA">KOLLUPITIYA</option>
+									<option value="KOLONNAWA">KOLONNAWA</option>
+									<option value="KOLONNAWA">KOLONNAWA</option>
+									<option value="KOMPANNAVEDIYA">KOMPANNAVEDIYA</option>
+									<option value="KONDAVIL">KONDAVIL</option>
+									<option value="KUDA WAWA">KUDA WAWA</option>
+									<option value="KUDAHAKAPOLA">KUDAHAKAPOLA</option>
+									<option value="KUMARAKANDA">KUMARAKANDA</option>
+									<option value="LUNUWILA">LUNUWILA</option>
+									<option value="MADAMPAGAMA">MADAMPAGAMA</option>
+									<option value="MADAMPE">MADAMPE</option>
+									<option value="MADHU ROAD">MADHU ROAD</option>
+									<option value="MADURANKULIYA">MADURANKULIYA</option>
+									<option value="MAHO">MAHO</option>
+									<option value="MAKUMBURA">MAKUMBURA</option>
+									<option value="MALLAKAM">MALLAKAM</option>
+									<option value="MANAMPITIYA">MANAMPITIYA</option>
+									<option value="MANGALAELIYA">MANGALAELIYA</option>
+									<option value="MANKULAM">MANKULAM</option>
+									<option value="MANNAR">MANNAR</option>
+									<option value="MANUWANGAMA">MANUWANGAMA</option>
+									<option value="MATHOTTAM">MATHOTTAM</option>
+									<option value="MAVILMADA">MAVILMADA</option>
+									<option value="MAVITTAPURAM">MAVITTAPURAM</option>
+									<option value="MIDIGAMA">MIDIGAMA</option>
+									<option value="MIHINTALE">MIHINTALE</option>
+									<option value="MIHINTALE JUNCTION">MIHINTALE JUNCTION</option>
+									<option value="MINNERIYA">MINNERIYA</option>
+									<option value="MIRIGAMA">MIRIGAMA</option>
+									<option value="MIRIHANPITIGAMA">MIRIHANPITIGAMA</option>
+									<option value="MURIKANDY">MURIKANDY</option>
+									<option value="MURUNKAN">MURUNKAN</option>
+									<option value="MUTHTHETTUGALA">MUTHTHETTUGALA</option>
+									<option value="NEGAMA">NEGAMA</option>
+									<option value="NEGOMBO">NEGOMBO</option>
+									<option value="NELUMPATHGAMA">NELUMPATHGAMA</option>
+									<option value="NELUMPOKUNA">NELUMPOKUNA</option>
+									<option value="NERIYAKULAM">NERIYAKULAM</option>
+									<option value="NOORANAGAR">NOORANAGAR</option>
+									<option value="NUGEGODA">NUGEGODA</option>
+									<option value="OHIYA">OHIYA</option>
+									<option value="OMANTHAI">OMANTHAI</option>
+									<option value="PADUKKA">PADUKKA</option>
+									<option value="PANALEEYA">PANALEEYA</option>
+									<option value="PANGIRIWATTA">PANGIRIWATTA</option>
+									<option value="PANNIPITIYA">PANNIPITIYA</option>
+									<option value="PARAKUMUYANA">PARAKUMUYANA</option>
+									<option value="PARANTHAN">PARANTHAN</option>
+									<option value="PARASANGAHAWEWA">PARASANGAHAWEWA</option>
+									<option value="RAMBUKKANA">RAMBUKKANA</option>
+									<option value="RANAMUGGAMUWA">RANAMUGGAMUWA</option>
+									<option value="RANDENIGAMA">RANDENIGAMA</option>
+									<option value="RATHGAMA">RATHGAMA</option>
+									<option value="RATMALANA">RATMALANA</option>
+									<option value="REDEETHENNA">REDEETHENNA</option>
+									<option value="RICHMOND HILL">RICHMOND HILL</option>
+									<option value="ROSELLA">ROSELLA</option>
+									<option value="SALIYAPURA">SALIYAPURA</option>
+									<option value="SANKATHANAI">SANKATHANAI</option>
+									<option value="SARASAVIUYANA">SARASAVIUYANA</option>
+									<option value="SAWARANA">SAWARANA</option>
+									<option value="SECRETARTAT HALT">SECRETARTAT HALT</option>
+									<option value="SEEDUWA">SEEDUWA</option>
+									<option value="TALAWATTEGEDARA">TALAWATTEGEDARA</option>
+									<option value="TAWALANOYA">TAWALANOYA</option>
+									<option value="TELLIPALLAI">TELLIPALLAI</option>
+									<option value="TELWATTE">TELWATTE</option>
+									<option value="TEMBLIGALA">TEMBLIGALA</option>
+									<option value="THACHANTHOPPU">THACHANTHOPPU</option>
+									<option value="THALPE">THALPE</option>
+									<option value="THAMBAGALLA">THAMBAGALLA</option>
+									<option value="Thambalagamuwa">Thambalagamuwa</option>
+									<option value="THAMBUTTEGAMA">THAMBUTTEGAMA</option>
+									<option value="THANDIKULAM">THANDIKULAM</option>
+									<option value="THIIRUKETHEESWARAM">THIIRUKETHEESWARAM</option>
+									<option value="THILLADIYA">THILLADIYA</option>
+									<option value="THIRANAGAMA">THIRANAGAMA</option>
+									<option value="THODDAVELI">THODDAVELI</option>
+									<option value="Urugodawattha">Urugodawattha</option>
+									<option value="UYANGALLA">UYANGALLA</option>
+									<option value="VALACHCHENEI">VALACHCHENEI</option>
+									<option value="VANDARAMULLAI">VANDARAMULLAI</option>
+									<option value="VAVUNIYA">VAVUNIYA</option>
+									<option value="VEYANGODA">VEYANGODA</option>
+									<option value="VIRALMURIPPUWA">VIRALMURIPPUWA</option>
+									<option value="WADDUWA">WADDUWA</option>
+									<option value="WAGA">WAGA</option>
+									<option value="WAIKKALA">WAIKKALA</option>
+									<option value="WALAHAPITIYA">WALAHAPITIYA</option>
+									<option value="WALASWEWA">WALASWEWA</option>
+									<option value="WALGAMA">WALGAMA</option>
+									<option value="WALPOLA">WALPOLA</option>
+									<option value="WANAWASALA">WANAWASALA</option>
+									<option value="WANDURAWA">WANDURAWA</option>
+									<option value="YATAWARA">YATAWARA</option>
+									<option value="YATIRAWANA">YATIRAWANA</option>
+									<option value="YATTALGODA">YATTALGODA</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="number">Number of Passengers</label>
+                        <input type="text" placeholder="Enter the Number" required id="psn">
+                    </div>
+                    <div class="input-box">
+                        <label for="date">Date</label>
+                        <input type="date" placeholder="Choose Date" required id="date">
+                    </div>
+                    <div class="button-container">
+                        <input id="button" type="submit" style="text-decoration: none; color: white;">
+                        <!-- <button type="submit"> <a href="payment.html" style="text-decoration: none; color: white;">Search</a></button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+        <footer>
+            <p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+            
+            <div class="info">
+                <p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+                <p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+                <p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+            </div>
+        </footer>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+    
+            window.onscroll = function() {myFunction2()};
+            var navbar = document.getElementById("myTopnav");
+            var sticky = navbar.offsetTop;
+            function myFunction2() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            }
+    
+            function Funerr(){
+			event.preventDefault();
+			var x = document.getElementById("from").value;
+			var y = document.getElementById("to").value;
+			//alert(x)
+
+			if(x == "Choose Station"){
+				document.getElementById("demo").innerHTML = "Select Your Start Station";
+			}else if(y == "Choose Station"){
+				document.getElementById("demo").innerHTML = "Select Your End Station";
+			}
+			else{
+                window.location.href = "payment.html";
+			}
+            }
+        </script>
+    </body>
+</html>

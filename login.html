@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in</title>
+    <style>
+        
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .img{
+            border: 1px solid rgba(0, 0, 0, 0);
+            width: 400px;
+            padding-top: 100px;
+        }
+        .tablelog {
+            background-color: #e2e2e2;
+            position: absolute;
+            top: 60%;
+            left: 55%;
+            transform: translatey(-50%) translateX(-40%);
+            border-width: 50vw;
+            border-radius: 10pt;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 50px;
+            color: rgb(47, 44, 44);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        td{
+            padding-top: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.514);
+            padding-bottom: 0;
+        }
+        input{
+            width: 97%;
+            height: 30px;
+            margin-bottom: -15px;
+            outline: none;
+            border:1px solid rgba(27, 27, 27, 0);
+            background-color: #e2e2e2;
+        }
+        button{
+            width: 100%; 
+            margin-top: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            padding: 5px 0;
+            font-weight: 400;
+            border-radius: 10px;
+            border: 1px solid rgba(27, 27, 27, 0);
+            cursor: pointer;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: linear-gradient(to right, #aa076b, #61045f);
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-image: linear-gradient(to right, #61045f, #aa076b);
+        }
+        h2{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h3{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            border: 1px solid rgba(255, 0, 0, 0);
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+		<div class="brand" >
+			<li id="logo"><img src="Images/Artboard 142.png"></li>
+			<!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+			<li class="social-icon">
+				<a href=""><i class="fab fa-facebook-f"></i></a>
+				<a href=""><i class="fab fa-twitter"></i></a>
+				<a href=""><i class="fab fa-instagram"></i></a>
+			</li>
+			
+		</div>
+		<nav class="topnav" id="myTopnav">
+			<ul>
+				<li class="f1">
+					<a href="index.html">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+				<li><a href="login.html">Sign In</a></li>
+				<li><a href="search.html">Seat Booking</a></li>
+                <li><a href="galary.html">Gallery</a></li>
+				<li><a href="train_shedule.html">Train Schedule</a></li>
+                <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                <li><a href="booking confirm.html">Booking Confirm</a></li>
+				<li><a href="Help.html">Help</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About US</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div class="Main" style="height: 100vh;">
+        <div class="img">
+            <img style="width:100%;" src="Images/login.png" alt="">
+        </div>
+        <div class="tablelog">
+            <Form action="#" method="post"  style="border:1px solid rgba(255, 0, 0, 0);">
+                <h2 style="text-align: center; font-size: 30px; border:1px solid rgba(255, 0, 0, 0); margin-top: 0;">USER LOGIN</h2>
+                <span  id="error" style="color: rgb(255, 0, 0); text-align: center; border:1px solid rgba(255, 0, 0, 0); position: absolute; left: 50%; transform: translateX(-50%); margin-top: -20px;"></span>
+                <table  id="tablelog" style="margin-top: 50px;">
+                    <tr>
+                        <td style="width: 130px; "><h3>User Name</h3></td>
+                        <td style="width: 200px;  "><input type="text" id="usen" name="usern"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 130px;"><h3>Password</h3></td>
+                        <td style="width: 200px;"><input type="password" id="pass" name="pass"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px; border: none;" colspan="2"><button class="button3" onclick="logVali()">LOGIN</button></td>
+                    </tr>
+                </table>
+            </Form>
+            <div style="margin-top: 10px;"><a href="Register.html" style="text-decoration: none; padding-top: 5px;">Register</a></div>
+        </div>
+    </div>
+    
+    <footer>
+		<p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+		
+		<div class="info">
+			<p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+			<p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+			<p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+		</div>
+	</footer>
+
+    <script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+
+		window.onscroll = function() {myFunction2()};
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+		function myFunction2() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+		}
+	</script>
+
+    <script>
+        function logVali(){
+            event.preventDefault();
+            var L= /^[a-zA-Z]+$/;
+            //var number = /^[0-9]+$/;
+            var useName = document.getElementById("usen").value;
+            var pass = document.getElementById("pass").value;
+            if (useName == ""){
+                document.getElementById("error").innerHTML= "Enter User Name";
+            }
+            else if (pass == ""){
+                document.getElementById("error").innerHTML= "Enter Password";
+            }
+            else {
+                if(useName.match(L)){
+                    search();
+                    //alert("Go to Home page");
+                }else if(!(useName.match(L))){
+                    document.getElementById("error").innerHTML= "Enter only letters";
+                }
+                // else if(!(pass.match(number))){
+                //     document.getElementById("error").innerHTML= "Enter only numbers";
+                // }
+                
+            }
+        }
+
+        function search(){
+            window.location.href = "search.html";
+        }
+    </script>
+</body>
+</html>

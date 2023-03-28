@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+        }
+        .tablec {
+            background-color: #e2e2e2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-width: 50vw;
+            border-radius: 8px;
+            padding: 10px 35px 30px 35px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+            padding-bottom: 20px;
+        }
+        table{
+        border-collapse: collapse;
+        }
+        td{
+            padding-top: 10px;
+            border-right: 5px solid rgba(245, 222, 179, 0);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.514);
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: #e2e2e2;
+        }
+        ::placeholder{
+            color: rgba(7, 7, 7, 0.432);
+            padding-left: 10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h2{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            color: rgb(47, 44, 44);
+        }
+
+        h3{
+            padding: 0;
+            margin: 5px 5px 5px 1px;
+            font-size: 18px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+        }
+        .error{
+            height: 17px;
+            color: rgb(255, 33, 33);
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            border: 1px solid rgba(29, 12, 12, 0);
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+        .button2 {
+            width: 100%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 10px 0;
+            border-radius: 5px;
+            background-image: linear-gradient(to right, #aa076b, #61045f);
+            color: white;
+            border: none;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 20px 0 20px 0;
+            cursor: pointer;
+        }
+        button:hover{
+            background-image: linear-gradient(to right, #61045f, #aa076b);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #000000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="tablec">
+    <h2 style="text-align: center;">USER REGISTER</h2>
+    <h4 id="error" class="error"></h4>
+    <table>
+        <form action="#" method="post">
+            <tr>
+                <td>
+                    <h3>Your Name</h3>
+                </td>
+                <td >
+                    <input type="text" id="fname" name="fname" placeholder="Your Name..">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>User Name</h3>
+                </td>
+                <td >
+                    <input type="text" id="lname" name="lname" placeholder="Your Username..">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>City</h3>
+                </td>
+                <td >
+                    <input type="text" id="city" name="addres1" placeholder="Enter Your City.">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Phone Number</h3>
+                </td>
+                <td >
+                    <input type="text" id="tel" name="addres2" placeholder="Tel Number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>NIC Number</h3>
+                </td>
+                <td >
+                    <input type="text" id="nic" name="addres3" placeholder="Enter Your NIC Number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>E-mail</h3>
+                </td>
+                <td >
+                    <input type="text" id="email" name="email" placeholder="example@mail.com">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Password</h3>
+                </td>
+                <td >
+                    <input type="password" id="pwd" name="pwd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Conform Password</h3>
+                </td>
+                <td >
+                    <input type="password" id="rpwd" name="rpwd">
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 0; border-bottom: none;"><button class="button2" onclick="valiFun()">Register</button></td>
+            </tr>
+        </form>
+    </table>
+</div>
+
+<script>
+    function valiFun(){
+    event.preventDefault();
+
+    var L= /^[a-zA-Z]+$/;
+    var number = /^[0-9]+$/;
+    var fName = document.getElementById("fname").value;
+    var lName = document.getElementById("lname").value;
+    var addOne = document.getElementById("city").value;
+    var addTwo = document.getElementById("tel").value;
+    var addThree = document.getElementById("nic").value;
+    var passOne = document.getElementById("pwd").value;
+    var passTwo = document.getElementById("rpwd").value;
+    var eMail = document.getElementById("email").value;
+
+    if (fName == ""){
+        document.getElementById("error").innerHTML="Enter Your Name";
+    }
+    else if(!(fName.match(L))){
+        document.getElementById("error").innerHTML= "First name should only letters";
+    }
+    else if (lName == ""){
+        document.getElementById("error").innerHTML="Enter Your Last Name";
+    }
+    /*else if(!(lName.match(L))){
+        document.getElementById("error").innerHTML= "Last name should only letters";
+    }*/
+    else if (addOne == ""){
+        document.getElementById("error").innerHTML="Enter Your City";
+    }
+    else if(!(addOne.match(L))){
+        document.getElementById("error").innerHTML= "City should only letters";
+    }
+    else if (addTwo == ""){
+        document.getElementById("error").innerHTML="Enter Your Mobile Number";
+    }
+    else if(!(addTwo.match(number))){
+        document.getElementById("error").innerHTML= "Your Telephone number shoud be only numbers";
+    }
+    else if(addThree == ""){
+        document.getElementById("error").innerHTML="Enter Your NIC";
+    }
+    else if(!(addThree.match(number))){
+        document.getElementById("error").innerHTML= "Your NIC number shoud be only numbers";
+    }
+    else if (eMail == "") {
+        document.getElementById("error").innerHTML="Enter Email Address";
+    }
+    else if (passOne == ""){
+        document.getElementById("error").innerHTML="Enter Your password";
+    }
+    else if (passTwo == ""){
+        document.getElementById("error").innerHTML="Enter Conform Password";
+    }
+    else if (passOne.length <= 7){
+        document.getElementById("error").innerHTML="Password length must be greater than 8 Numbers";
+    }
+    else if (passOne != passTwo){
+        document.getElementById("error").innerHTML="Conform Password is Wrong";
+    }
+    else {
+        //alert("pass");
+        window.location.href = "login.html";
+    }
+}
+/*function passVali(){
+        window.location.href = "login.html";
+    }*/
+
+</script>
+
+
+</script>
+</body>
+</html>

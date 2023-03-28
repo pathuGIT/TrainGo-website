@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .section{
+                display: flex;
+                width: 100%;
+                min-height: 100vh;
+                background-color: #ddd;
+            }
+
+            .container{
+                border: 1px solid rgba(255, 0, 0, 0);
+                width: 80%;
+                display: block;
+                margin: auto;
+                padding-top: 100px;
+            }
+
+            .content-section{
+                padding: 0;
+                margin: 0;
+                float: left;
+                width: 55%;
+            }
+
+            .img-section{
+                float: right;
+                width: 40%;
+            }   
+
+            .img-section img{
+                width: 100%;
+                height: auto;
+            }
+
+            .content-section .title{
+                text-transform: uppercase;
+                font-size: 28px;
+            }
+            .content-section .title h1{
+                margin: 0;
+            }
+
+            .content-section .contentt h3{
+                margin-top: 20px;
+                color: #5d5d5d;
+                font-size: 21px;
+            }
+
+            .content-section .contentt p{
+                text-align: justify;
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            .content-section .contentt .button{
+                margin-top: 30px;
+            }
+
+            .content-section .contentt .button a{
+                background-color: #3d3d3d;
+                padding: 12px 40px;
+                text-decoration: none;
+                color: #fff;
+                font-size: 25px;
+                letter-spacing: 1.5px;
+            }
+
+            .content-section .contentt .button a:hover{
+                background-color: #a52a2a;
+                color: #fff;
+            }
+
+            .content-section .social{
+                margin:40px 40px;
+            }
+
+            .content-section .social i{
+                color: #a52a2a;
+                font-size: 30px;
+                padding: 0 10px;
+            }
+
+            .content-section .social i:hover{
+                color: #3d3d3d;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="brand" >
+                <li id="logo"><img src="Images/Artboard 142.png"></li>
+                <!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+                
+                <li class="social-icon">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                
+            </div>
+            <nav class="topnav" id="myTopnav">
+                <ul>
+                    <li class="f1">
+                        <a href="index.html">Home</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li><a href="login.html">Sign In</a></li>
+                    <li><a href="search.html">Seat Booking</a></li>
+                    <li><a href="galary.html">Gallery</a></li>
+                    <li><a href="train_shedule.html">Train Schedule</a></li>
+                    <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                    <li><a href="booking confirm.html">Booking Confirm</a></li>
+                    <li><a href="Help.html">Help</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                    <li><a href="aboutus.html">About US</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="section">
+            <div class="container">
+                <div class="content-section">
+                    <div class="title">
+                        <h1>About Us</h1>
+                    </div>
+                    <div class="contentt">
+                        <h3>We are the Major Trasnportation service in Sri Lanka right now</h3>
+                        <p><span style="color: rgb(4, 85, 122);">TrainGo</span> is a Private section department functioning under the Ministry of Transport. It is a major transport service provider and is the only rail transport organization in the country. SLR transports both passenger and freight. At its inception, railway was carrying more freight than passenger.</p>
+                        <div class="button">
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="img-section">
+                    <img src="Images/railway.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+            
+            <div class="info">
+                <p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+                <p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+                <p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+            </div>
+        </footer>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+    
+            window.onscroll = function() {myFunction2()};
+            var navbar = document.getElementById("myTopnav");
+            var sticky = navbar.offsetTop;
+            function myFunction2() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+            } 
+        </script>
+    </body>
+</html>

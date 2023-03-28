@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Prices</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+body{
+    margin: 0;
+    background-image: linear-gradient(to right, #ffffff , #f9fdff);
+}
+.content{
+    border-bottom: 1px solid rgba(128, 128, 128, 0);
+    height: 80vh;
+    text-align: center;
+}
+#h1{
+    position: relative;
+    top: -50px;
+    text-align: left;
+    display: inline-block;
+    font-size: 3.1rem;
+    text-shadow: 7px 5px rgba(224, 224, 224, 0.582);
+}
+.include{
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 700px;   
+}
+.division{
+    border: 1px solid rgba(0, 0, 139, 0);
+    margin-top: 100px;
+    background-color: rgb(240, 245, 230);
+    text-align: center;
+}
+.table{
+    border: 1px solid rgba(5, 5, 5, 0);
+    display: inline-block;
+    position: relative;
+    top: 31%;
+    transform: translateX(-40%);
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidearea{
+    width: 300px;
+    float: right;
+    background-image: linear-gradient(to right, #ffffff , #b5e5f8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 50px;
+    margin-top: 30px;
+
+}
+
+.boxarea{
+    border: 1px solid rgba(28, 240, 0, 0);
+    height: 250px;
+    display: inline-block;
+    padding: 0 50px;
+}
+.boxarea h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 7px 5px rgb(223, 223, 223);
+}
+.dropdown h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgba(255, 0, 0, 0);
+    display: inline-block;
+    padding: 7px 15px;
+}
+.dropdown-content a{
+    padding: 5px 7px;
+    background-color: gold;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dropdown-content a:hover{
+    background-color: rgb(241, 21, 21);
+	color: white;
+}
+        td input,select,button{
+            height: 50px;
+        }
+        ::placeholder{
+            font-size: 15px;
+            color: #1a5a74;
+        }
+        .sbtn{
+            background-color: gold;
+        }
+        .sbtn:hover{
+            background-color:rgb(241, 21, 21);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+		<div class="brand" >
+			<li id="logo"><img src="Images/Artboard 142.png"></li>
+			<!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+			<li class="social-icon">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+			
+		</div>
+		<nav class="topnav" id="myTopnav">
+			<ul>
+				<li class="f1">
+					<a href="index.html">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+				<li><a href="login.html">Sign In</a></li>
+				<li><a href="search.html">Seat Booking</a></li>
+                <li><a href="galary.html">Gallery</a></li>
+				<li><a href="train_shedule.html">Train Schedule</a></li>
+                <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                <li><a href="booking confirm.html">Booking Confirm</a></li>
+				<li><a href="Help.html">Help</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About US</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <div class="content">
+        
+        <div class="include">
+            <!-- <div class="img">
+                <img src="Images/tt.jpg" alt="">
+            </div> -->
+            <h1 id="h1">Ticket Price</h1>
+            <div class="table">
+                <form action="#"> 
+                <table >
+                    <tr>
+                        <td style="width:30px">
+                            <div style="width:20px; " ><img style="position: relative;left: 50%;transform: translateX(-25%); width:100%;" src="Images/ti.jpg" alt="#" class="tiimage"></div>
+                        </td>
+                        <td>
+                            <!-- <input type="text" name="f" placeholder="From Colombo Fort" class="inputfield" size="25px" > -->
+                            <select name="f" id="from" class="inputfield" >
+                                <option value="From">From:</option>
+                                <option value="3">ABANPOLA</option>
+                                <option value="410">ADAGALA</option>
+                                <option value="13">AGBOPURA</option>
+                                <option value="11">AHANGAMA</option>
+                                <option value="18">AHUNGALLE</option>
+                                <option value="7">AKURALA</option>
+                                <option value="22">ALAWATUPITIYA</option>
+                                <option value="9">ALAWWA</option>
+                                <option value="329">ALUTH AMBALAMA</option>
+                                <option value="8">ALUTHGAMA</option>
+                                <option value="1">AMBALANGODA</option>
+                                <option value="2">AMBEWELA</option>
+                                <option value="14">AMBEYPUSSA</option>
+                                <option value="19">ANAWILUNDAWA</option>
+                                <option value="10">ANDADOLA</option>
+                                <option value="5">ANGAMPITIYA</option>
+                                <option value="4">ANGULANA</option>
+                                <option value="12">ANURADHAPURA</option>
+                                <option value="15">ANURADHAPURA TOWN</option>
+                                <option value="6">ARACHCHIKATTUWA</option>
+                                <option value="343">ARAPATHGAMA</option>
+                                <option value="483">Arivial Nagar</option>
+                                <option value="16">ARUKKUWATTE</option>
+                                <option value="17">ASELAPURA</option>
+                                <option value="467">ASGIRIYA</option>
+                                <option value="21">AUKANA</option>
+                                <option value="20">AVISSAWELLA</option>
+                                <option value="23">BADULLA</option>
+                                <option value="31">BALANA</option>
+                                <option value="34">BALAPITIYA</option>
+                                <option value="35">BAMBALAPITIYA</option>
+                                <option value="488">BAMBARENDA</option>
+                                <option value="25">BANDARAWELA</option>
+                                <option value="475">Bandirippuwa</option>
+                                <option value="28">BANGADENIYA</option>
+                                <option value="39">BASELINE ROAD</option>
+                                <option value="33">BATTALUOYA</option>
+                                <option value="24">BATTICALOA</option>
+                                <option value="41">BATUWATTE</option>
+                                <option value="490">BELIATHTHA</option>
+                                <option value="26">BEMMULLA</option>
+                                <option value="32">BENTOTA</option>
+                                <option value="36">BERUWALA</option>
+                                <option value="30">BOLAWATTE</option>
+                                <option value="38">BOOSSA</option>
+                                <option value="37">BORELESSA</option>
+                                <option value="40">BOTALE</option>
+                                <option value="27">BULUGAHAGODA</option>
+                                <option value="29">BUTHGAMUWA</option>
+                                <option value="398">CHAVAKACHCHERI</option>
+                                <option value="371">CHEDDIIKULAM</option>
+                                <option value="44">CHILAW</option>
+                                <option value="43">CHINA BEY</option>
+                                <option value="423">CHUNNAKAM</option>
+                                <option value="61">COLOMBO FORT</option>
+                                <option value="46">COTTA ROAD</option>
+                                <option value="53">DARALUWA</option>
+                                <option value="54">DEHIWALA</option>
+                                <option value="337">Dekinda</option>
+                                <option value="47">DEMATAGODA</option>
+                                <option value="48">DEMODARA</option>
+                                <option value="52">DEWAPURAM</option>
+                                <option value="417">DEWEDDA</option>
+                                <option value="50">DIYATALAWA</option>
+                                <option value="51">DODANDUWA</option>
+                                <option value="60">EGODA UYANA</option>
+                                <option value="395">ELIPHANT PASS</option>
+                                <option value="57">ELLE</option>
+                                <option value="401">ELUTHUMATTUVAL</option>
+                                <option value="341">ELWALA</option>
+                                <option value="55">ENDERAMULLA</option>
+                                <option value="56">ERATTAPERIYAKULAM</option>
+                                <option value="59">ERAVUR</option>
+                                <option value="58">ERUKKALAM PENDU</option>
+                                <option value="104">FREE TRADE ZONE</option>
+                                <option value="64">GALABODA</option>
+                                <option value="69">GALGAMUWA</option>
+                                <option value="68">GALLE</option>
+                                <option value="62">GALLELLA</option>
+                                <option value="74">GALOYA JUNCTION</option>
+                                <option value="70">GAMMANA</option>
+                                <option value="75">GAMPAHA</option>
+                                <option value="76">GAMPOLA</option>
+                                <option value="71">GANEGODA</option>
+                                <option value="63">GANEMULLA</option>
+                                <option value="73">GANEWATTE</option>
+                                <option value="479">Gangathilaka</option>
+                                <option value="65">GANGODA</option>
+                                <option value="440">GANTALAWA</option>
+                                <option value="66">GELIOYA</option>
+                                <option value="72">GINTHOTA</option>
+                                <option value="77">GIRAMBE</option>
+                                <option value="67">GODAGAMA</option>
+                                <option value="79">GREAT WESTERN</option>
+                                <option value="81">HABARADUWA</option>
+                                <option value="82">HABARANA</option>
+                                <option value="456">Hadiriwalana</option>
+                                <option value="84">HALIELA</option>
+                                <option value="92">HAPUTALE</option>
+                                <option value="80">HATAMUNA</option>
+                                <option value="87">HATARAS KOTUWA</option>
+                                <option value="96">HATTON</option>
+                                <option value="89">HEEL OYA</option>
+                                <option value="83">HEENDENIYA</option>
+                                <option value="91">HETTIMULLA</option>
+                                <option value="86">HIKKADUWA</option>
+                                <option value="93">HINGURAKGODA</option>
+                                <option value="444">HINGURALA</option>
+                                <option value="94">HIRIYALA</option>
+                                <option value="90">HOMAGAMA</option>
+                                <option value="85">HOMAGAMA HOSPITAL</option>
+                                <option value="95">HORAPE</option>
+                                <option value="88">HORIWIALA</option>
+                                <option value="97">HUNUPITIYA</option>
+                                <option value="98">HYINPORT</option>
+                                <option value="100">IDALGASINNA</option>
+                                <option value="101">IHALAGAMA</option>
+                                <option value="102">IHALAKOTTE</option>
+                                <option value="105">IHALAWATAWALA</option>
+                                <option value="99">INDURUWA</option>
+                                <option value="103">INGURUOYA</option>
+                                <option value="428">INUVIL</option>
+                                <option value="107">JA-ELA</option>
+                                <option value="400">JAFFNA</option>
+                                <option value="106">JAYANTHIPURA</option>
+                                <option value="114">KADADASI NAGAR</option>
+                                <option value="128">KADIGAMUWA</option>
+                                <option value="120">KADUGANNAWA</option>
+                                <option value="113">KADUGODA</option>
+                                <option value="480">Kahatapitiya</option>
+                                <option value="152">KAHAWA</option>
+                                <option value="154">KAKKAPALLIYA</option>
+                                <option value="127">KALAWEWA</option>
+                                <option value="123">KALKUDAH</option>
+                                <option value="147">KALUTARA NORTH</option>
+                                <option value="148">KALUTARA SOUTH</option>
+                                <option value="130">KAMBURUGAMUWA</option>
+                                <option value="108">KANDANA</option>
+                                <option value="119">KANDEGODA</option>
+                                <option value="115">KANDY</option>
+                                <option value="424">KANKESANTHURAI</option>
+                                <option value="132">KANTALE</option>
+                                <option value="110">KAPUWATTE</option>
+                                <option value="139">KARADIPUWAL</option>
+                                <option value="146">KATHALUWA</option>
+                                <option value="109">KATTUWA</option>
+                                <option value="144">KATUGASTOTA</option>
+                                <option value="468">KATUGASTOTA     ROAD</option>
+                                <option value="150">KATUGODA</option>
+                                <option value="122">KATUKURUNDA</option>
+                                <option value="42">KATUNAYAKA AIRPORT</option>
+                                <option value="145">KATUNAYAKE</option>
+                                <option value="117">KEENAWALA</option>
+                                <option value="487">KEKANADURA</option>
+                                <option value="141">KEKIRAWA</option>
+                                <option value="124">KELANIYA</option>
+                                <option value="333">KILINOCHCHI</option>
+                                <option value="133">KINIGAMA</option>
+                                <option value="447">KIRINDIWELA</option>
+                                <option value="138">KIRULAPANA</option>
+                                <option value="116">KITAL ELLE</option>
+                                <option value="111">KOCHCHIKADE</option>
+                                <option value="397">KODIKAMAM</option>
+                                <option value="134">KOGGALA</option>
+                                <option value="474">KOHOMBILIWALA</option>
+                                <option value="429">KOKUVIL</option>
+                                <option value="126">KOLLUPITIYA</option>
+                                <option value="453">KOLONNAWA</option>
+                                <option value="125">KOLONNAWA</option>
+                                <option value="140">KOMPANNAVEDIYA</option>
+                                <option value="422">KONDAVIL</option>
+                                <option value="135">KONWEWA</option>
+                                <option value="136">KORALAWELLA</option>
+                                <option value="143">KOSGAMA</option>
+                                <option value="112">KOSGODA</option>
+                                <option value="121">KOSHINNA</option>
+                                <option value="118">KOTAGALA</option>
+                                <option value="137">KOTTAWA</option>
+                                <option value="153">KUDA WAWA</option>
+                                <option value="149">KUDAHAKAPOLA</option>
+                                <option value="131">KUMARAKANDA</option>
+                                <option value="129">KUMBALGAMA</option>
+                                <option value="408">KURAHANHENAGAMA</option>
+                                <option value="151">KURANA</option>
+                                <option value="142">KURUNEGALA</option>
+                                <option value="158">LAKSAUYANA</option>
+                                <option value="155">LIYANAGEMULLA</option>
+                                <option value="334">LIYANWALA</option>
+                                <option value="156">LUNAWA</option>
+                                <option value="157">LUNUWILA</option>
+                                <option value="181">MADAMPAGAMA</option>
+                                <option value="161">MADAMPE</option>
+                                <option value="372">MADHU ROAD</option>
+                                <option value="174">MADURANKULIYA</option>
+                                <option value="472">Magalegoda</option>
+                                <option value="393">MAGALEGODA</option>
+                                <option value="167">MAGGONA</option>
+                                <option value="452">MAGULEGODA</option>
+                                <option value="190">MAHAIYAWA</option>
+                                <option value="159">MAHARAGAMA</option>
+                                <option value="170">MAHO</option>
+                                <option value="182">MAKUMBURA</option>
+                                <option value="427">MALLAKAM</option>
+                                <option value="183">MANAMPITIYA</option>
+                                <option value="165">MANGALAELIYA</option>
+                                <option value="331">MANKULAM</option>
+                                <option value="434">MANNAR</option>
+                                <option value="179">MANUWANGAMA</option>
+                                <option value="160">MARADANA</option>
+                                <option value="462">MARAKONA</option>
+                                <option value="454">MARALUWEWA</option>
+                                <option value="186">MATALE</option>
+                                <option value="187">MATARA</option>
+                                <option value="432">MATHOTTAM</option>
+                                <option value="466">MAVILMADA</option>
+                                <option value="425">MAVITTAPURAM</option>
+                                <option value="163">MEDAGAMA</option>
+                                <option value="189">MEDAWACHCHIYA</option>
+                                <option value="421">MEDDEGAMA</option>
+                                <option value="464">MEEGAMMANA</option>
+                                <option value="164">MEEGODA</option>
+                                <option value="403">MEESALAI</option>
+                                <option value="188">MHA INDURUWA</option>
+                                <option value="162">MIDIGAMA</option>
+                                <option value="169">MIHINTALE</option>
+                                <option value="168">MIHINTALE JUNCTION</option>
+                                <option value="173">MINNERIYA</option>
+                                <option value="171">MIRIGAMA</option>
+                                <option value="409">MIRIHANPITIGAMA</option>
+                                <option value="172">MIRISSA</option>
+                                <option value="443">MIRISWATTA</option>
+                                <option value="402">MIRUSUVIL</option>
+                                <option value="177">MOLLIPATANA</option>
+                                <option value="176">MORAGOLLAGAMA</option>
+                                <option value="175">MORAKELE</option>
+                                <option value="184">MORATUWA</option>
+                                <option value="439">MOUNT LAVINIA</option>
+                                <option value="180">MUNDAL</option>
+                                <option value="332">MURIKANDY</option>
+                                <option value="431">MURUNKAN</option>
+                                <option value="185">MUTHTHETTUGALA</option>
+                                <option value="191">NAGOLLAGAMA</option>
+                                <option value="196">NAILIYA</option>
+                                <option value="492">NAKULUGAMUWA</option>
+                                <option value="197">NANUOYA</option>
+                                <option value="195">NARAHENPITA</option>
+                                <option value="192">NATTANDIYA</option>
+                                <option value="399">NAVATKULI</option>
+                                <option value="201">NAWALAPITIYA</option>
+                                <option value="202">NAWINNA</option>
+                                <option value="194">NEGAMA</option>
+                                <option value="193">NEGOMBO</option>
+                                <option value="415">NELUMPATHGAMA</option>
+                                <option value="199">NELUMPOKUNA</option>
+                                <option value="370">NERIYAKULAM</option>
+                                <option value="198">NOORANAGAR</option>
+                                <option value="200">NUGEGODA</option>
+                                <option value="203">OHIYA</option>
+                                <option value="204">OMANTHAI</option>
+                                <option value="208">PADUKKA</option>
+                                <option value="420">PAHALAWARDHANA</option>
+                                <option value="238">PALAVI</option>
+                                <option value="396">PALLAI</option>
+                                <option value="465">PALLE TALAVINNA</option>
+                                <option value="219">PALLEWALA</option>
+                                <option value="237">PALUGASWEWA</option>
+                                <option value="223">PANADURA</option>
+                                <option value="224">PANAGODA</option>
+                                <option value="226">PANALEEYA</option>
+                                <option value="233">PANGIRIWATTA</option>
+                                <option value="205">PANNIPITIYA</option>
+                                <option value="216">PARAKUMUYANA</option>
+                                <option value="394">PARANTHAN</option>
+                                <option value="213">PARASANGAHAWEWA</option>
+                                <option value="209">PATAGAMGODA</option>
+                                <option value="236">PATHANPAHA</option>
+                                <option value="230">PATTIPOLA</option>
+                                <option value="211">PAYAGALA NORTH</option>
+                                <option value="212">PAYAGALA SOUTH</option>
+                                <option value="232">PEMROSE</option>
+                                <option value="207">PERADENIYA</option>
+                                <option value="459">PERAKUMPURA</option>
+                                <option value="231">PERALANDA</option>
+                                <option value="227">PERIYANAGAVILLU</option>
+                                <option value="436">PESALAI</option>
+                                <option value="485">PILADUWA</option>
+                                <option value="217">PILIDUWA</option>
+                                <option value="222">PILIMATALAWA</option>
+                                <option value="416">PINNAGOLLA</option>
+                                <option value="228">PINNAWALA</option>
+                                <option value="214">PINWATTE</option>
+                                <option value="210">PIYADIGAMA</option>
+                                <option value="240">PIYAGAMA</option>
+                                <option value="477">Polgaha Anga</option>
+                                <option value="218">POLGAHAWELA</option>
+                                <option value="220">POLONNARUWA</option>
+                                <option value="221">POLWATHUMODARA</option>
+                                <option value="229">POONEWA</option>
+                                <option value="419">PORAPOLA</option>
+                                <option value="418">PORAPOLA JUNC.</option>
+                                <option value="234">POTUHERA</option>
+                                <option value="206">PULACHCHIKULAM</option>
+                                <option value="330">PULIYANKULAM</option>
+                                <option value="225">PUNANI</option>
+                                <option value="406">PUNKANKULAM</option>
+                                <option value="235">PUTTALAM</option>
+                                <option value="445">PUWAKPITIYA</option>
+                                <option value="446">PUWAKPITIYA TOWN</option>
+                                <option value="243">RADELLA</option>
+                                <option value="246">RAGAMA</option>
+                                <option value="241">RAMBUKKANA</option>
+                                <option value="247">RANAMUGGAMUWA</option>
+                                <option value="245">RANDENIGAMA</option>
+                                <option value="249">RATHGAMA</option>
+                                <option value="248">RATMALANA</option>
+                                <option value="244">REDEETHENNA</option>
+                                <option value="242">RICHMOND HILL</option>
+                                <option value="250">ROSELLA</option>
+                                <option value="251">SALIYAPURA</option>
+                                <option value="404">SANKATHANAI</option>
+                                <option value="257">SARASAVIUYANA</option>
+                                <option value="259">SAWARANA</option>
+                                <option value="252">SECRETARTAT HALT</option>
+                                <option value="253">SEEDUWA</option>
+                                <option value="255">SEENIGAMA</option>
+                                <option value="254">SENARATHGAMA</option>
+                                <option value="258">SEVANAPITIYA</option>
+                                <option value="339">SIYABALANGAMUWA</option>
+                                <option value="260">SIYALANGAMUWA</option>
+                                <option value="256">SRAWASTHIPURA</option>
+                                <option value="437">TALAIMANNAR</option>
+                                <option value="438">TALAIMANNAR PIER</option>
+                                <option value="270">TALAWA</option>
+                                <option value="269">TALAWAKELE</option>
+                                <option value="276">TALAWATTEGEDARA</option>
+                                <option value="461">TAWALANOYA</option>
+                                <option value="426">TELLIPALLAI</option>
+                                <option value="277">TELWATTE</option>
+                                <option value="262">TEMBLIGALA</option>
+                                <option value="405">THACHANTHOPPU</option>
+                                <option value="271">THALPE</option>
+                                <option value="414">THAMBAGALLA</option>
+                                <option value="450">Thambalagamuwa</option>
+                                <option value="263">THAMBUTTEGAMA</option>
+                                <option value="265">THANDIKULAM</option>
+                                <option value="433">THIIRUKETHEESWARAM</option>
+                                <option value="267">THILLADIYA</option>
+                                <option value="272">THIRANAGAMA</option>
+                                <option value="435">THODDAVELI</option>
+                                <option value="455">Thuruliyagama</option>
+                                <option value="268">TIMBIRIYAGEDARA</option>
+                                <option value="274">TISMALPOLA</option>
+                                <option value="273">TRAIN HALT 01</option>
+                                <option value="264">TRINCOMALEE</option>
+                                <option value="275">TUDELLA</option>
+                                <option value="266">TUMMODARA</option>
+                                <option value="278">UDATALAWINNA</option>
+                                <option value="285">UDATHTHAWALA</option>
+                                <option value="281">UDHAMULLA</option>
+                                <option value="413">UDUGODAGAMA</option>
+                                <option value="279">UDUWARA</option>
+                                <option value="280">UGGALLA</option>
+                                <option value="282">UKUWELA</option>
+                                <option value="283">ULAPANE</option>
+                                <option value="284">UNAWATUNA</option>
+                                <option value="451">Urugodawattha</option>
+                                <option value="412">UYANGALLA</option>
+                                <option value="286">VALACHCHENEI</option>
+                                <option value="288">VANDARAMULLAI</option>
+                                <option value="289">VAVUNIYA</option>
+                                <option value="287">VEYANGODA</option>
+                                <option value="340">VIRALMURIPPUWA</option>
+                                <option value="292">WADDUWA</option>
+                                <option value="295">WAGA</option>
+                                <option value="299">WAIKKALA</option>
+                                <option value="296">WALAHAPITIYA</option>
+                                <option value="407">WALASWEWA</option>
+                                <option value="301">WALGAMA</option>
+                                <option value="303">WALPOLA</option>
+                                <option value="306">WANAWASALA</option>
+                                <option value="305">WANDURAWA</option>
+                                <option value="308">WATAGODA</option>
+                                <option value="336">WATARAKA</option>
+                                <option value="300">WATAWALA</option>
+                                <option value="294">WATTEGAMA</option>
+                                <option value="486">WEHERAHENA</option>
+                                <option value="478">Weligalla</option>
+                                <option value="302">WELIGAMA</option>
+                                <option value="298">WELIKANDA</option>
+                                <option value="293">WELLAWA</option>
+                                <option value="307">WELLAWATTA</option>
+                                <option value="411">WERAGALA</option>
+                                <option value="489">WEWURUKANNALA</option>
+                                <option value="304">WIJAYARAJADAHANA</option>
+                                <option value="309">WILWATTE</option>
+                                <option value="297">WLAKUBURA</option>
+                                <option value="391">Yagoda</option>
+                                <option value="473">YAGODA</option>
+                                <option value="312">YAGODA</option>
+                                <option value="387">YAGODA</option>
+                                <option value="390">Yagoda</option>
+                                <option value="388">Yagoda</option>
+                                <option value="389">Yagoda</option>
+                                <option value="315">YAPAHUWA</option>
+                                <option value="313">YATAGAMA</option>
+                                <option value="463">YATAWARA</option>
+                                <option value="311">YATIRAWANA</option>
+                                <option value="316">YATTALGODA</option>
+                            </select>
+                        </td>
+                        <td style="width:30px">
+                            <div style="width:20px;" ><img style="position: relative;left: 50%;transform: translateX(-25%); width:100%" src="Images/ti.jpg" alt="#" class="tiimage"></div>
+                        </td>
+                        <td >
+                            <!-- <input type="text" name="t" placeholder="To" class="inputfield" size="25px"> -->
+                            <select name="t" id="to" class="inputfield">
+                                <option value="to">To:</option>
+                                <option value="3">ABANPOLA</option>
+                                <option value="410">ADAGALA</option>
+                                <option value="13">AGBOPURA</option>
+                                <option value="11">AHANGAMA</option>
+                                <option value="18">AHUNGALLE</option>
+                                <option value="7">AKURALA</option>
+                                <option value="22">ALAWATUPITIYA</option>
+                                <option value="9">ALAWWA</option>
+                                <option value="329">ALUTH AMBALAMA</option>
+                                <option value="8">ALUTHGAMA</option>
+                                <option value="1">AMBALANGODA</option>
+                                <option value="2">AMBEWELA</option>
+                                <option value="14">AMBEYPUSSA</option>
+                                <option value="19">ANAWILUNDAWA</option>
+                                <option value="10">ANDADOLA</option>
+                                <option value="5">ANGAMPITIYA</option>
+                                <option value="4">ANGULANA</option>
+                                <option value="12">ANURADHAPURA</option>
+                                <option value="15">ANURADHAPURA TOWN</option>
+                                <option value="6">ARACHCHIKATTUWA</option>
+                                <option value="343">ARAPATHGAMA</option>
+                                <option value="483">Arivial Nagar</option>
+                                <option value="16">ARUKKUWATTE</option>
+                                <option value="17">ASELAPURA</option>
+                                <option value="467">ASGIRIYA</option>
+                                <option value="21">AUKANA</option>
+                                <option value="20">AVISSAWELLA</option>
+                                <option value="23">BADULLA</option>
+                                <option value="31">BALANA</option>
+                                <option value="34">BALAPITIYA</option>
+                                <option value="35">BAMBALAPITIYA</option>
+                                <option value="488">BAMBARENDA</option>
+                                <option value="25">BANDARAWELA</option>
+                                <option value="475">Bandirippuwa</option>
+                                <option value="28">BANGADENIYA</option>
+                                <option value="39">BASELINE ROAD</option>
+                                <option value="33">BATTALUOYA</option>
+                                <option value="24">BATTICALOA</option>
+                                <option value="41">BATUWATTE</option>
+                                <option value="490">BELIATHTHA</option>
+                                <option value="26">BEMMULLA</option>
+                                <option value="32">BENTOTA</option>
+                                <option value="36">BERUWALA</option>
+                                <option value="30">BOLAWATTE</option>
+                                <option value="38">BOOSSA</option>
+                                <option value="37">BORELESSA</option>
+                                <option value="40">BOTALE</option>
+                                <option value="27">BULUGAHAGODA</option>
+                                <option value="29">BUTHGAMUWA</option>
+                                <option value="398">CHAVAKACHCHERI</option>
+                                <option value="371">CHEDDIIKULAM</option>
+                                <option value="44">CHILAW</option>
+                                <option value="43">CHINA BEY</option>
+                                <option value="423">CHUNNAKAM</option>
+                                <option value="61">COLOMBO FORT</option>
+                                <option value="46">COTTA ROAD</option>
+                                <option value="53">DARALUWA</option>
+                                <option value="54">DEHIWALA</option>
+                                <option value="337">Dekinda</option>
+                                <option value="47">DEMATAGODA</option>
+                                <option value="48">DEMODARA</option>
+                                <option value="52">DEWAPURAM</option>
+                                <option value="417">DEWEDDA</option>
+                                <option value="50">DIYATALAWA</option>
+                                <option value="51">DODANDUWA</option>
+                                <option value="60">EGODA UYANA</option>
+                                <option value="395">ELIPHANT PASS</option>
+                                <option value="57">ELLE</option>
+                                <option value="401">ELUTHUMATTUVAL</option>
+                                <option value="341">ELWALA</option>
+                                <option value="55">ENDERAMULLA</option>
+                                <option value="56">ERATTAPERIYAKULAM</option>
+                                <option value="59">ERAVUR</option>
+                                <option value="58">ERUKKALAM PENDU</option>
+                                <option value="104">FREE TRADE ZONE</option>
+                                <option value="64">GALABODA</option>
+                                <option value="69">GALGAMUWA</option>
+                                <option value="68">GALLE</option>
+                                <option value="62">GALLELLA</option>
+                                <option value="74">GALOYA JUNCTION</option>
+                                <option value="70">GAMMANA</option>
+                                <option value="75">GAMPAHA</option>
+                                <option value="76">GAMPOLA</option>
+                                <option value="71">GANEGODA</option>
+                                <option value="63">GANEMULLA</option>
+                                <option value="73">GANEWATTE</option>
+                                <option value="479">Gangathilaka</option>
+                                <option value="65">GANGODA</option>
+                                <option value="440">GANTALAWA</option>
+                                <option value="66">GELIOYA</option>
+                                <option value="72">GINTHOTA</option>
+                                <option value="77">GIRAMBE</option>
+                                <option value="67">GODAGAMA</option>
+                                <option value="79">GREAT WESTERN</option>
+                                <option value="81">HABARADUWA</option>
+                                <option value="82">HABARANA</option>
+                                <option value="456">Hadiriwalana</option>
+                                <option value="84">HALIELA</option>
+                                <option value="92">HAPUTALE</option>
+                                <option value="80">HATAMUNA</option>
+                                <option value="87">HATARAS KOTUWA</option>
+                                <option value="96">HATTON</option>
+                                <option value="89">HEEL OYA</option>
+                                <option value="83">HEENDENIYA</option>
+                                <option value="91">HETTIMULLA</option>
+                                <option value="86">HIKKADUWA</option>
+                                <option value="93">HINGURAKGODA</option>
+                                <option value="444">HINGURALA</option>
+                                <option value="94">HIRIYALA</option>
+                                <option value="90">HOMAGAMA</option>
+                                <option value="85">HOMAGAMA HOSPITAL</option>
+                                <option value="95">HORAPE</option>
+                                <option value="88">HORIWIALA</option>
+                                <option value="97">HUNUPITIYA</option>
+                                <option value="98">HYINPORT</option>
+                                <option value="100">IDALGASINNA</option>
+                                <option value="101">IHALAGAMA</option>
+                                <option value="102">IHALAKOTTE</option>
+                                <option value="105">IHALAWATAWALA</option>
+                                <option value="99">INDURUWA</option>
+                                <option value="103">INGURUOYA</option>
+                                <option value="428">INUVIL</option>
+                                <option value="107">JA-ELA</option>
+                                <option value="400">JAFFNA</option>
+                                <option value="106">JAYANTHIPURA</option>
+                                <option value="114">KADADASI NAGAR</option>
+                                <option value="128">KADIGAMUWA</option>
+                                <option value="120">KADUGANNAWA</option>
+                                <option value="113">KADUGODA</option>
+                                <option value="480">Kahatapitiya</option>
+                                <option value="152">KAHAWA</option>
+                                <option value="154">KAKKAPALLIYA</option>
+                                <option value="127">KALAWEWA</option>
+                                <option value="123">KALKUDAH</option>
+                                <option value="147">KALUTARA NORTH</option>
+                                <option value="148">KALUTARA SOUTH</option>
+                                <option value="130">KAMBURUGAMUWA</option>
+                                <option value="108">KANDANA</option>
+                                <option value="119">KANDEGODA</option>
+                                <option value="115">KANDY</option>
+                                <option value="424">KANKESANTHURAI</option>
+                                <option value="132">KANTALE</option>
+                                <option value="110">KAPUWATTE</option>
+                                <option value="139">KARADIPUWAL</option>
+                                <option value="146">KATHALUWA</option>
+                                <option value="109">KATTUWA</option>
+                                <option value="144">KATUGASTOTA</option>
+                                <option value="468">KATUGASTOTA     ROAD</option>
+                                <option value="150">KATUGODA</option>
+                                <option value="122">KATUKURUNDA</option>
+                                <option value="42">KATUNAYAKA AIRPORT</option>
+                                <option value="145">KATUNAYAKE</option>
+                                <option value="117">KEENAWALA</option>
+                                <option value="487">KEKANADURA</option>
+                                <option value="141">KEKIRAWA</option>
+                                <option value="124">KELANIYA</option>
+                                <option value="333">KILINOCHCHI</option>
+                                <option value="133">KINIGAMA</option>
+                                <option value="447">KIRINDIWELA</option>
+                                <option value="138">KIRULAPANA</option>
+                                <option value="116">KITAL ELLE</option>
+                                <option value="111">KOCHCHIKADE</option>
+                                <option value="397">KODIKAMAM</option>
+                                <option value="134">KOGGALA</option>
+                                <option value="474">KOHOMBILIWALA</option>
+                                <option value="429">KOKUVIL</option>
+                                <option value="126">KOLLUPITIYA</option>
+                                <option value="453">KOLONNAWA</option>
+                                <option value="125">KOLONNAWA</option>
+                                <option value="140">KOMPANNAVEDIYA</option>
+                                <option value="422">KONDAVIL</option>
+                                <option value="135">KONWEWA</option>
+                                <option value="136">KORALAWELLA</option>
+                                <option value="143">KOSGAMA</option>
+                                <option value="112">KOSGODA</option>
+                                <option value="121">KOSHINNA</option>
+                                <option value="118">KOTAGALA</option>
+                                <option value="137">KOTTAWA</option>
+                                <option value="153">KUDA WAWA</option>
+                                <option value="149">KUDAHAKAPOLA</option>
+                                <option value="131">KUMARAKANDA</option>
+                                <option value="129">KUMBALGAMA</option>
+                                <option value="408">KURAHANHENAGAMA</option>
+                                <option value="151">KURANA</option>
+                                <option value="142">KURUNEGALA</option>
+                                <option value="158">LAKSAUYANA</option>
+                                <option value="155">LIYANAGEMULLA</option>
+                                <option value="334">LIYANWALA</option>
+                                <option value="156">LUNAWA</option>
+                                <option value="157">LUNUWILA</option>
+                                <option value="181">MADAMPAGAMA</option>
+                                <option value="161">MADAMPE</option>
+                                <option value="372">MADHU ROAD</option>
+                                <option value="174">MADURANKULIYA</option>
+                                <option value="472">Magalegoda</option>
+                                <option value="393">MAGALEGODA</option>
+                                <option value="167">MAGGONA</option>
+                                <option value="452">MAGULEGODA</option>
+                                <option value="190">MAHAIYAWA</option>
+                                <option value="159">MAHARAGAMA</option>
+                                <option value="170">MAHO</option>
+                                <option value="182">MAKUMBURA</option>
+                                <option value="427">MALLAKAM</option>
+                                <option value="183">MANAMPITIYA</option>
+                                <option value="165">MANGALAELIYA</option>
+                                <option value="331">MANKULAM</option>
+                                <option value="434">MANNAR</option>
+                                <option value="179">MANUWANGAMA</option>
+                                <option value="160">MARADANA</option>
+                                <option value="462">MARAKONA</option>
+                                <option value="454">MARALUWEWA</option>
+                                <option value="186">MATALE</option>
+                                <option value="187">MATARA</option>
+                                <option value="432">MATHOTTAM</option>
+                                <option value="466">MAVILMADA</option>
+                                <option value="425">MAVITTAPURAM</option>
+                                <option value="163">MEDAGAMA</option>
+                                <option value="189">MEDAWACHCHIYA</option>
+                                <option value="421">MEDDEGAMA</option>
+                                <option value="464">MEEGAMMANA</option>
+                                <option value="164">MEEGODA</option>
+                                <option value="403">MEESALAI</option>
+                                <option value="188">MHA INDURUWA</option>
+                                <option value="162">MIDIGAMA</option>
+                                <option value="169">MIHINTALE</option>
+                                <option value="168">MIHINTALE JUNCTION</option>
+                                <option value="173">MINNERIYA</option>
+                                <option value="171">MIRIGAMA</option>
+                                <option value="409">MIRIHANPITIGAMA</option>
+                                <option value="172">MIRISSA</option>
+                                <option value="443">MIRISWATTA</option>
+                                <option value="402">MIRUSUVIL</option>
+                                <option value="177">MOLLIPATANA</option>
+                                <option value="176">MORAGOLLAGAMA</option>
+                                <option value="175">MORAKELE</option>
+                                <option value="184">MORATUWA</option>
+                                <option value="439">MOUNT LAVINIA</option>
+                                <option value="180">MUNDAL</option>
+                                <option value="332">MURIKANDY</option>
+                                <option value="431">MURUNKAN</option>
+                                <option value="185">MUTHTHETTUGALA</option>
+                                <option value="191">NAGOLLAGAMA</option>
+                                <option value="196">NAILIYA</option>
+                                <option value="492">NAKULUGAMUWA</option>
+                                <option value="197">NANUOYA</option>
+                                <option value="195">NARAHENPITA</option>
+                                <option value="192">NATTANDIYA</option>
+                                <option value="399">NAVATKULI</option>
+                                <option value="201">NAWALAPITIYA</option>
+                                <option value="202">NAWINNA</option>
+                                <option value="194">NEGAMA</option>
+                                <option value="193">NEGOMBO</option>
+                                <option value="415">NELUMPATHGAMA</option>
+                                <option value="199">NELUMPOKUNA</option>
+                                <option value="370">NERIYAKULAM</option>
+                                <option value="198">NOORANAGAR</option>
+                                <option value="200">NUGEGODA</option>
+                                <option value="203">OHIYA</option>
+                                <option value="204">OMANTHAI</option>
+                                <option value="208">PADUKKA</option>
+                                <option value="420">PAHALAWARDHANA</option>
+                                <option value="238">PALAVI</option>
+                                <option value="396">PALLAI</option>
+                                <option value="465">PALLE TALAVINNA</option>
+                                <option value="219">PALLEWALA</option>
+                                <option value="237">PALUGASWEWA</option>
+                                <option value="223">PANADURA</option>
+                                <option value="224">PANAGODA</option>
+                                <option value="226">PANALEEYA</option>
+                                <option value="233">PANGIRIWATTA</option>
+                                <option value="205">PANNIPITIYA</option>
+                                <option value="216">PARAKUMUYANA</option>
+                                <option value="394">PARANTHAN</option>
+                                <option value="213">PARASANGAHAWEWA</option>
+                                <option value="209">PATAGAMGODA</option>
+                                <option value="236">PATHANPAHA</option>
+                                <option value="230">PATTIPOLA</option>
+                                <option value="211">PAYAGALA NORTH</option>
+                                <option value="212">PAYAGALA SOUTH</option>
+                                <option value="232">PEMROSE</option>
+                                <option value="207">PERADENIYA</option>
+                                <option value="459">PERAKUMPURA</option>
+                                <option value="231">PERALANDA</option>
+                                <option value="227">PERIYANAGAVILLU</option>
+                                <option value="436">PESALAI</option>
+                                <option value="485">PILADUWA</option>
+                                <option value="217">PILIDUWA</option>
+                                <option value="222">PILIMATALAWA</option>
+                                <option value="416">PINNAGOLLA</option>
+                                <option value="228">PINNAWALA</option>
+                                <option value="214">PINWATTE</option>
+                                <option value="210">PIYADIGAMA</option>
+                                <option value="240">PIYAGAMA</option>
+                                <option value="477">Polgaha Anga</option>
+                                <option value="218">POLGAHAWELA</option>
+                                <option value="220">POLONNARUWA</option>
+                                <option value="221">POLWATHUMODARA</option>
+                                <option value="229">POONEWA</option>
+                                <option value="419">PORAPOLA</option>
+                                <option value="418">PORAPOLA JUNC.</option>
+                                <option value="234">POTUHERA</option>
+                                <option value="206">PULACHCHIKULAM</option>
+                                <option value="330">PULIYANKULAM</option>
+                                <option value="225">PUNANI</option>
+                                <option value="406">PUNKANKULAM</option>
+                                <option value="235">PUTTALAM</option>
+                                <option value="445">PUWAKPITIYA</option>
+                                <option value="446">PUWAKPITIYA TOWN</option>
+                                <option value="243">RADELLA</option>
+                                <option value="246">RAGAMA</option>
+                                <option value="241">RAMBUKKANA</option>
+                                <option value="247">RANAMUGGAMUWA</option>
+                                <option value="245">RANDENIGAMA</option>
+                                <option value="249">RATHGAMA</option>
+                                <option value="248">RATMALANA</option>
+                                <option value="244">REDEETHENNA</option>
+                                <option value="242">RICHMOND HILL</option>
+                                <option value="250">ROSELLA</option>
+                                <option value="251">SALIYAPURA</option>
+                                <option value="404">SANKATHANAI</option>
+                                <option value="257">SARASAVIUYANA</option>
+                                <option value="259">SAWARANA</option>
+                                <option value="252">SECRETARTAT HALT</option>
+                                <option value="253">SEEDUWA</option>
+                                <option value="255">SEENIGAMA</option>
+                                <option value="254">SENARATHGAMA</option>
+                                <option value="258">SEVANAPITIYA</option>
+                                <option value="339">SIYABALANGAMUWA</option>
+                                <option value="260">SIYALANGAMUWA</option>
+                                <option value="256">SRAWASTHIPURA</option>
+                                <option value="437">TALAIMANNAR</option>
+                                <option value="438">TALAIMANNAR PIER</option>
+                                <option value="270">TALAWA</option>
+                                <option value="269">TALAWAKELE</option>
+                                <option value="276">TALAWATTEGEDARA</option>
+                                <option value="461">TAWALANOYA</option>
+                                <option value="426">TELLIPALLAI</option>
+                                <option value="277">TELWATTE</option>
+                                <option value="262">TEMBLIGALA</option>
+                                <option value="405">THACHANTHOPPU</option>
+                                <option value="271">THALPE</option>
+                                <option value="414">THAMBAGALLA</option>
+                                <option value="450">Thambalagamuwa</option>
+                                <option value="263">THAMBUTTEGAMA</option>
+                                <option value="265">THANDIKULAM</option>
+                                <option value="433">THIIRUKETHEESWARAM</option>
+                                <option value="267">THILLADIYA</option>
+                                <option value="272">THIRANAGAMA</option>
+                                <option value="435">THODDAVELI</option>
+                                <option value="455">Thuruliyagama</option>
+                                <option value="268">TIMBIRIYAGEDARA</option>
+                                <option value="274">TISMALPOLA</option>
+                                <option value="273">TRAIN HALT 01</option>
+                                <option value="264">TRINCOMALEE</option>
+                                <option value="275">TUDELLA</option>
+                                <option value="266">TUMMODARA</option>
+                                <option value="278">UDATALAWINNA</option>
+                                <option value="285">UDATHTHAWALA</option>
+                                <option value="281">UDHAMULLA</option>
+                                <option value="413">UDUGODAGAMA</option>
+                                <option value="279">UDUWARA</option>
+                                <option value="280">UGGALLA</option>
+                                <option value="282">UKUWELA</option>
+                                <option value="283">ULAPANE</option>
+                                <option value="284">UNAWATUNA</option>
+                                <option value="451">Urugodawattha</option>
+                                <option value="412">UYANGALLA</option>
+                                <option value="286">VALACHCHENEI</option>
+                                <option value="288">VANDARAMULLAI</option>
+                                <option value="289">VAVUNIYA</option>
+                                <option value="287">VEYANGODA</option>
+                                <option value="340">VIRALMURIPPUWA</option>
+                                <option value="292">WADDUWA</option>
+                                <option value="295">WAGA</option>
+                                <option value="299">WAIKKALA</option>
+                                <option value="296">WALAHAPITIYA</option>
+                                <option value="407">WALASWEWA</option>
+                                <option value="301">WALGAMA</option>
+                                <option value="303">WALPOLA</option>
+                                <option value="306">WANAWASALA</option>
+                                <option value="305">WANDURAWA</option>
+                                <option value="308">WATAGODA</option>
+                                <option value="336">WATARAKA</option>
+                                <option value="300">WATAWALA</option>
+                                <option value="294">WATTEGAMA</option>
+                                <option value="486">WEHERAHENA</option>
+                                <option value="478">Weligalla</option>
+                                <option value="302">WELIGAMA</option>
+                                <option value="298">WELIKANDA</option>
+                                <option value="293">WELLAWA</option>
+                                <option value="307">WELLAWATTA</option>
+                                <option value="411">WERAGALA</option>
+                                <option value="489">WEWURUKANNALA</option>
+                                <option value="304">WIJAYARAJADAHANA</option>
+                                <option value="309">WILWATTE</option>
+                                <option value="297">WLAKUBURA</option>
+                                <option value="391">Yagoda</option>
+                                <option value="473">YAGODA</option>
+                                <option value="312">YAGODA</option>
+                                <option value="387">YAGODA</option>
+                                <option value="390">Yagoda</option>
+                                <option value="388">Yagoda</option>
+                                <option value="389">Yagoda</option>
+                                <option value="315">YAPAHUWA</option>
+                                <option value="313">YATAGAMA</option>
+                                <option value="463">YATAWARA</option>
+                                <option value="311">YATIRAWANA</option>
+                                <option value="316">YATTALGODA</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" >
+                            <select name="clz" id="clz" style="font-size: 1em; width: 100%; color: #1a5a74; padding-left: 5px;">
+                                <option selected disabled>Choose your class</option>
+                                <option value="0"> 1<sup>st</sup> Class </option>
+                                <option value="50"> 2<sup>nd</sup> Class </option>
+                                <option value="100"> 3<sup>rd</sup> Class </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="font-size: 1em; width: 100%; border: 1px solid rgba(0, 0, 0, 0.658); padding: 15px 0 15px 12px; text-align: left; border-radius: 2px;">PRICE: <span id="price"></span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><button onclick="Fun()" type="submit" class="sbtn" style="width: 100%; cursor: pointer; font-size: 20px;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border: none; ">Ticket price</button></td>
+                    </tr>
+                </table>
+                </form>
+            </div>
+            <div style="width:80px; position: absolute; left:71%; top: 18%;"><img style="width:100%" src="Images/bulb.png" alt=""></div>
+            <div class="sidearea">
+                    <h1 style=" text-align: center; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Did you know?</h1>
+                    <h3 style=" padding: 0 0 0 20px; text-align: left; font-weight: 500; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">What are the Train Classes .?</h3>
+                    <p style="text-align: justify; padding: 0 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Depending on the length of your trip and your preferences you can
+                        choose a first or second class ticket in a sleeper coach for an
+                        overnight trip or opt for a hard or soft seat if available.
+                        Note that the choice of ticket classes depends both on the
+                        route and the length of your trip. Basically, your train may
+                        feature first class berths but you will not be able to book
+                        one if you are doing just a short two-hour stretch. In general,
+                        second class berths are a good choice for longer trips, and soft
+                        seats get you covered if your train ride is supposed to take under
+                        4-5 hours.</p>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="division" >
+            <div class="boxarea">
+                <h1>Search ticket prices Mannualy</h1>
+                <div class="dropdown">
+                    <h3>Choose The Train Class</h3>
+                    <div class="dropdown-content">
+                        <a  onclick="page3()">1<sup>st</sup> Class</a>
+                        <a  onclick="page1()">2<sup>nd</sup> Class</a>
+                        <a  onclick="page2()">3<sup>rd</sup> Class</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="iframearea" style="border: 1px solid rgba(255, 0, 0, 0); height: 80vh; overflow: hidden;">
+                <div style="border: 1px solid rgba(22, 15, 15, 0);  margin: 10px 50px;">
+                    <iframe style="border: 1px solid rgb(22, 15, 15); height: 70vh; background-color: lightgray;" width="100%" id="myframe" frameborder="0" scrolling="yes" onload="resizeIframe(this)">
+                        <!-- <h2></h2> -->
+                    </iframe>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+            
+            <div class="info">
+                <p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+                <p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+                <p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+            </div>
+        </footer>
+
+
+    <script>
+        //iframe Javascript
+
+        function page1() {
+            var iframe = document.getElementById("myframe");
+
+            iframe.src ="page01forTicket.html";
+        }
+
+        function page2() {
+            var iframe = document.getElementById("myframe");
+
+            iframe.src ="page02forTicket.html";
+        }
+
+        function page3() {
+            var iframe = document.getElementById("myframe");
+
+            iframe.src ="page03forTicket.html";
+        }
+
+        //iframe length Javascript
+
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+    </script>
+    <script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className === "topnav") {
+			x.className += " responsive";
+		  } else {
+			x.className = "topnav";
+		  }
+		}
+
+		window.onscroll = function() {myFunction2()};
+		var navbar = document.getElementById("myTopnav");
+		var sticky = navbar.offsetTop;
+		function myFunction2() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+		}
+
+		function Fun(){
+            event.preventDefault();
+            
+           var Start,End,CLZ,ANS;
+           var from = document.getElementById("from").value;
+           var to = document.getElementById("to").value;
+           var clz = document.getElementById("clz").value;
+
+           CLZ = parseInt(clz,10); 
+           if(CLZ == 0){
+                if(from != to){
+                    Start = parseInt(from, 10);
+                    End = parseInt(to, 10);
+                    if(Start>End){
+                        ANS = (Start - End)+100;
+                        document.getElementById("price").innerHTML =" Rs." + ANS;
+                    }else{
+                        ANS = (End - Start)+100;
+                        document.getElementById("price").innerHTML =" Rs." + ANS
+                    }  
+                }else{
+                    document.getElementById("price").innerHTML = " NOT VALID INPUT"
+                }
+           }else if(CLZ == 50){
+                if(from != to){
+                        Start = parseInt(from, 10);
+                        End = parseInt(to, 10);
+                        if(Start>End){
+                            ANS = (Start - End)+50;
+                            document.getElementById("price").innerHTML =" Rs." + ANS;
+                        }else{
+                            ANS = (End - Start)+50;
+                            document.getElementById("price").innerHTML =" Rs." + ANS
+                        }  
+                    }else{
+                        document.getElementById("price").innerHTML = " NOT VALID INPUT"
+                    }
+           }else if(CLZ == 100){
+                if(from != to){
+                        Start = parseInt(from, 10);
+                        End = parseInt(to, 10);
+                        if(Start>End){
+                            ANS = Start - End;
+                            document.getElementById("price").innerHTML =" Rs." + ANS;
+                        }else{
+                            ANS = End - Start;
+                            document.getElementById("price").innerHTML =" Rs." + ANS
+                        }  
+                    }else{
+                        document.getElementById("price").innerHTML = " NOT VALID INPUT"
+                    }
+           }
+           
+        }
+	</script>
+</body>
+
+</html>

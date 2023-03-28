@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Shedule</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main{
+            border: 1px solid rgba(0, 0, 0, 0);
+            height: 80vh;
+        }
+        .main .img{
+            margin: 50px 0 0 0;
+            width: 400px;
+            border: 1px solid rgba(0, 0, 0, 0);
+        }
+        .para{
+            border: 1px solid rgba(0, 0, 0, 0);
+            display: inline-block;
+            float: right;
+            margin:  0 50px 0 0;
+            margin-top: -150px;
+        }
+        .para h3 span{
+            font-size: 4vw;
+            font-weight: 700;
+            text-shadow: 7px 5px rgb(223, 223, 223);
+        }
+        .para h3{
+            font-size: 2vw;
+            font-weight: 200;
+        }
+        h4{
+            padding: 20px  0 20px 30px;
+            font-size: 4vh;
+            margin: 50px 0 10px 0;
+            border: 1px solid rgba(255, 0, 0, 0);
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+        .sedule{
+            padding: 0;
+            margin: 0 20px;
+            border: 1px solid rgba(255, 0, 0, 0);
+        }
+        table {
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-collapse: collapse;
+            width: 100%;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        td {
+            text-align: left;
+            cursor: pointer;
+            padding: 8px;
+            text-align: left;
+        }
+        th{
+            padding: 15px 0 15px 10px;
+            text-align: left;
+        }
+        tr{
+            background-color: whitesmoke;
+            border-left: 10px solid #1a5a74;
+            border-bottom: 10px solid #ffffff;
+        }
+        tr:hover {
+            background-color:#1a5b741c;
+            border-left: 10px solid rgb(241, 207, 9);
+        }
+        tr:first-child{
+            border-left: 10px solid rgb(131, 128, 128);
+            border-top: 1px solid rgb(131, 128, 128);
+            border-bottom: 1px solid rgb(131, 128, 128);
+            border-right: 1px solid rgb(131, 128, 128);
+            background-color: rgba(255, 255, 255, 0);
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+		<div class="brand" >
+			<li id="logo"><img src="Images/Artboard 142.png"></li>
+			<!-- <li id="brand-name">Train<span style="color: rgb(0, 0, 0);">Go</span></li> -->
+			<li class="social-icon">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+			
+		</div>
+		<nav class="topnav" id="myTopnav">
+			<ul>
+				<li class="f1">
+					<a href="index.html">Home</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</li>
+				<li><a href="login.html">Sign In</a></li>
+				<li><a href="search.html">Seat Booking</a></li>
+                <li><a href="galary.html">Gallery</a></li>
+				<li><a href="train_shedule.html">Train Schedule</a></li>
+                <li><a href="Ticket_price.html">Ticket Prices</a></li>
+                <li><a href="booking confirm.html">Booking Confirm</a></li>
+				<li><a href="Help.html">Help</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About US</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div class="main">
+        <div class="img">
+            <img style="width: 100%;" src="Images/sedulecheck.png" alt="">
+        </div>
+        <div class="para">
+            <h3> <span> Travel Smart:</span> <br> Stay on Time with Our Train Schedule Page</h3>
+        </div>
+    </div>
+<div class="sedule">
+    <h4>Main Line <span id="dte" style=" font-weight: 400; font-style: italic; color: #a31284; float: right; margin-right: 200px; font-size: 3vh;  padding: 8px 15px;"></span></h4>
+    <table width="100%">
+        <tr>
+            <th>Train Name & No</th>
+            <th>from</th>
+            <th>Depart</th>
+            <th>TO</th>
+            <th>Arrives</th>
+            <th>Duration</th>
+            <th>Class</th>
+            <th>Working or Cansel</th>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;"> Udarata Manike </span></span><br>Express Train (No-810)<br>All Days</div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+            <td>Badulla</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>03.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>07.00</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"></div><span style="color: #006992; font-weight: 450;">Podi Manike </span></span><br>Express Train (No-720)<br>Monday to Friday </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 02.30 </td>
+            <td>Badulla</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>09.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>07.10</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Kandy Manike </span><br>Express Train (No-410)<br>Only Weekends </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 07.30 </td>
+            <td>Kandy</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>11.45</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>04.15</td>
+            <td>1st 2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Slow Train </span><br>Normal Train (No-470)<br>All Days </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.30 </td>
+            <td>Kandy</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>03.00</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>05.00</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Canceled</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;"> Ella Odyssey </span><br>Express Train (No-810)<br>Only Weekends </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 07.00 </td>
+            <td>Badulla</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>01.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>05.30</td>
+            <td>1st & 2nd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Badulla Nigth Mail</span><br>Normal Train (No-540)<br>All Days </div></td>
+            <td>Badulla</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br> 08.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>07.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>12.00</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Kandy Nigth Mail </span><br>Nomal Train (No-350)<br>All Days </div></td>
+            <td>Kandy</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br> 11.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>06.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>06.00</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Canseled</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Udarata Manike </span><br>Normal Train (No-270)<br>All Days </div></td>
+            <td>Badulla</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 01.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>02.00</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>12.30</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Podi Manike </span><br>Normal Train (No-450)<br>All Days </div></td>
+            <td>Kandy</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 11.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>08.00</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>08.30</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+   </table>
+   <h4>Southern Line <span id="dte2" style=" font-weight: 400; font-style: italic; color: #a31284; float: right; margin-right: 200px; font-size: 3vh;  padding: 8px 15px;"></span></h4>
+   <table width="100%">
+    <tr>
+        <th>Train Name & No</th>
+        <th>from</th>
+        <th>Depart</th>
+        <th>TO</th>
+        <th>Arrives</th>
+        <th>Duration</th>
+        <th>Class</th>
+        <th>Working or Cansel</th>
+    </tr>
+    <tr>
+        <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Ruhunu Kumari </span><br>Express Train (No-940)<br>All Days </div></td>
+        <td>Fort</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+        <td>Beliaththa</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br>02.30</td>
+        <td><img src="Images/clock.jpg"width="40px" height="25px"><br>06.00</td>
+        <td>2nd & 3rd class are avalabel </td>
+        <td>Working</td>
+    </tr>
+    <tr>
+        <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Galu Kumari </span><br>Express Train (No-440)<br>All Days </div></td>
+        <td>Fort</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.30 </td>
+        <td>Gall</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br>12.30</td>
+        <td><img src="Images/clock.jpg"width="40px" height="25px"><br>03.00</td>
+        <td>2nd & 3rd class are avalabel </td>
+        <td>Working</td>
+    </tr> 
+    <tr>
+        <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Muhudu Kumari </span><br>nomal Train (No-640)<br>All Days </div></td>
+        <td>Gall</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+        <td>Fort</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br>02.30</td>
+        <td><img src="Images/clock.jpg"width="40px" height="25px"><br>06.00</td>
+        <td>2nd & 3rd class are avalabel </td>
+        <td>Working</td>
+    </tr>
+    <tr>
+        <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Rajarata Rejina </span><br>Express Train (No-978)<br>All Days </div></td>
+        <td>Beliaththa</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.00 </td>
+        <td>Anuradhapuraya</td>
+        <td><img src="Images/moon.jpg"width="40px" height="25px"><br>08.30</td>
+        <td><img src="Images/clock.jpg"width="40px" height="25px"><br>11.30</td>
+        <td>1st,2nd & 3rd class are avalabel </td>
+        <td>Working</td>
+    </tr>
+    <tr>
+        <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Muhudu Relly Kumari </span><br>nomal Train (No-250)<br>All Days </div></td>
+        <td>Beliaththa</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 01.30 </td>
+        <td>Fort</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br>06.00</td>
+        <td><img src="Images/clock.jpg"width="40px" height="25px"><br>04.30</td>
+        <td>2nd & 3rd class are avalabel </td>
+        <td>Working</td>
+    </tr>
+    <tr>
+        <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Kaluthara Kumari </span><br>nomal Train (No-970)<br>All Days </div></td>
+        <td>Fort</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.30 </td>
+        <td>Kaluthara</td>
+        <td><img src="Images/sun.jpg"width="40px" height="25px"><br>11.40</td>
+        <td><img src="Images/clock.jpg"width="40px" height="25px"><br>02.10</td>
+        <td> 3rd class avalabel </td>
+        <td>Working</td>
+    </tr>
+</table>   
+    <h4>Nouthern Line<span id="dte3" style=" font-weight: 400; font-style: italic; color: #a31284; float: right; margin-right: 200px; font-size: 3vh;  padding: 8px 15px;"></span></h4>
+    <table width="100%">
+        <tr>
+            <th>Train Name & No</th>
+            <th>from</th>
+            <th>Depart</th>
+            <th>TO</th>
+            <th>Arrives</th>
+            <th>Duration</th>
+            <th>Class</th>
+            <th>Working or Cansel</th>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Trincomalee Manika </span><br>Express Train (No-830)<br>All Days </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+            <td>Trincomalee</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>08.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>12.00</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;"> Batticlo </span><br>Express Train (No-880)<br>All Days </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 07.00 </td>
+            <td>Batticlo</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>05.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>10.30</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr> 
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Yaldewi </span><br>Express Train (No-884)<br>All Days </div></td>
+            <td>Jaffna</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>03.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>07.00</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Rajarata Rejina </span><br>Express Train (No-940)<br>All Days </div></td>
+            <td>Beliaththa</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.00 </td>
+            <td>Anuradhapuraya</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>08.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>11.30</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Nigth Mail </span><br>nomal Train (No-999)<br>All Days </div></td>
+            <td>Anuradhapuraya</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br> 07.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>04.15</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>08.45</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Canseled</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Yal Kumari </span><br>nomal Train (No-988)<br>Only Weekend </div></td>
+            <td>Jaffna</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>08.40</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>11.10</td>
+            <td> 3rd class avalabel </td>
+            <td>Working</td>
+        </tr>
+    </table>   
+    <h4>Puththalam Line<span id="dte4" style=" font-weight: 400; font-style: italic; color: #a31284; float: right; margin-right: 200px; font-size: 3vh;  padding: 8px 15px;"></span></h4>
+    <table width="100%">
+        <tr>
+            <th>Train Name & No</th>
+            <th>from</th>
+            <th>Depart</th>
+            <th>TO</th>
+            <th>Arrives</th>
+            <th>Duration</th>
+            <th>Class</th>
+            <th>Working or Cansel</th>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Puththalam Kumari</span> <br>Express Train (No-140)<br>WeekDays </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.45 </td>
+            <td>Puththalama</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>12.00</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>3.15</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Werala Kumari</span>  <br>Nomal Train (No-555)<br>All Days </div></td>
+            <td>Puththslsma</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 09.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>12.45</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>03.15</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr> 
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Mail train </span><br>Nomal Train (No-441)<br>All Days </div></td>
+            <td>Puththalama</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 02.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>05.15</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>02.45</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;"> Weli Kumari</span><br>Express Train (No-940)<br>All Days </div></td>
+            <td>Puththalama</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br> 09.00 </td>
+            <td>Fort</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>10.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>01.30</td>
+            <td>1st,2nd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        
+    </table>   
+    <h4>Kalani Vally Line<span id="dte5" style=" font-weight: 400; font-style: italic; color: #a31284; float: right; margin-right: 200px; font-size: 3vh;  padding: 8px 15px;"></span></h4>
+    <table width="100%">
+        <tr>
+            <th>Train Name & No</th>
+            <th>from</th>
+            <th>Depart</th>
+            <th>TO</th>
+            <th>Arrives</th>
+            <th>Duration</th>
+            <th>Class</th>
+            <th>Working or Cansel</th>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Seethawaka Odyssey</span> <br>Express Train (No-940)<br>Week Days </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+            <td>Waga</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>10.45</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>02.15</td>
+            <td>1st,2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Seethwaka Manike </span> <br>Express Train (No-440)<br>All Days </div></td>
+            <td>Awissawella</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 05.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>08.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>03.00</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Canseled</td>
+        </tr> 
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Kosgama Kumari</span> <br>Nomal Train (No-090)<br>All Days </div></td>
+            <td>Kaluthara</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 08.30 </td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>10.00</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>01.30</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;"> Padukka Manike</span> <br>Express Train (No-070)<br>All Days </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 12.00 </td>
+            <td>Padukka</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br>01.30</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>01.30</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+        <tr>
+            <td><img src="Images/logo.jpg" width="40px" height="25px"><div class="sub"><span style="color: #006992; font-weight: 450;">Seetha Kumari </span><br>nomal Train (No-040)<br>All Days </div></td>
+            <td>Fort</td>
+            <td><img src="Images/sun.jpg"width="40px" height="25px"><br> 05.30 </td>
+            <td>Awissawella</td>
+            <td><img src="Images/moon.jpg"width="40px" height="25px"><br>08.00</td>
+            <td><img src="Images/clock.jpg"width="40px" height="25px"><br>02.30</td>
+            <td>2nd & 3rd class are avalabel </td>
+            <td>Working</td>
+        </tr>
+       
+    </table>  
+</div>  
+<footer>
+    <p class="p">&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+    
+    <div class="info">
+        <p><i class="fa fa-address-book-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">123 Main Street, Mathara SL</a> </p>
+        <p><i class="fa fa-phone" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">(+94) 562786512</a> </p>
+        <p><i class="fa fa-envelope-o" style="font-size:24px"></i> <a href="#" style="text-decoration: none; color: black;">info@traingo.com</a> </p>
+    </div>
+</footer>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    window.onscroll = function() {myFunction2()};
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+        function myFunction2() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    var d = new Date();
+    document.getElementById("dte").innerHTML = d.toDateString();
+    document.getElementById("dte2").innerHTML = d.toDateString();
+    document.getElementById("dte3").innerHTML = d.toDateString();
+    document.getElementById("dte4").innerHTML = d.toDateString();
+    document.getElementById("dte5").innerHTML = d.toDateString();
+    
+</script>
+</body>
+</html> 

@@ -1,0 +1,400 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+/* Start Hedare Style*/
+header {
+	color: #fff;
+}
+
+header .brand{
+	padding-left: 25px;
+	background-image: linear-gradient(to right, #3598b1 , #1c818f);
+	/* background-image: linear-gradient(to right, hsla(199, 68%, 45%, 0.945) , #045164); */
+}
+
+header .brand li{
+	display: inline-block;
+}
+
+header .brand #logo{
+	margin: 5px 0;
+	width: 250px;
+	border: 1px solid rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+header .brand #logo img{
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+.social-icon{
+	width: fit-content;
+	position: relative;
+	top: 15%;
+	left: 65%;
+	transform: translateY(-30%);
+}
+.social-icon i{
+	color: #e6e1e1;
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+header .brand #brand-name{
+	/* font-size: 29px;
+	font-family:'Courier New', Courier, monospace; */
+	color: rgb(255, 255, 255);
+	font-size: 1.8rem;
+	margin-left: -13px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-weight: 700;
+	letter-spacing: 5px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-20%);
+	border: 1px solid rgba(255, 0, 0, 0);
+	cursor: pointer;
+}
+
+header nav{
+	border: 1px solid rgba(255, 0, 0, 0);
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	background-color: 	#1a5a74;
+	background-image: linear-gradient(to right, #175974 , #045164);
+	z-index: 10;
+}
+
+nav ul {
+	margin-left: 10px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	border:1px solid rgba(255, 255, 255, 0) ;
+	padding-right: 10px;
+	font-size: 2ch;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav a:hover{
+	border-right:1px solid white ;
+}
+
+.icon{
+	display: none;
+	width: fit-content;
+	
+}
+
+@media only screen and (max-width: 900px) {
+
+	/* Start Header logo and brand name minimize and center*/
+	header .brand li{
+		display: inline-block;
+	}
+	header .brand #logo{
+		width: 100px;
+	}
+	header .brand #logo img{
+		width: 100%;
+	}
+	header .brand #brand-name{
+		font-size: 40px;
+	}
+	/* End Header logo and brand name minimize and center*/
+
+	/* Start Navigation bar nav menu center,padding zero,*/
+	header nav{
+		padding: 0;
+	}
+	nav ul li{
+		border-bottom: 1px solid white;
+		margin: 0;
+		padding: 2px 0;
+		text-align: center;
+	}
+	/* End Navigation bar nav menu center,padding zero,*/
+	
+	.icon{
+		display: block;
+	}
+	nav li{
+		display: block;
+	}
+	nav .f1 a{
+		display: inline-block;
+	}
+	nav .f1 .icon{
+		position: relative;
+		float: right;
+		left: -20px;
+	}
+	nav a {
+		font-size: 15px;
+	}
+	
+	.topnav ul li:not(:first-child) {display: none;}
+
+	.topnav.responsive ul li:not(:first-child) {display: block;}
+  }
+  .sticky {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+  }
+  
+  .sticky + .content {
+	padding-top: 10px;
+  }
+/* End Header Style*/
+
+/* Start Main Style*/ 
+.content{
+	height: 110vh;
+	background-image: linear-gradient(to right, #ffffff , #f9fdff);
+}
+.content .sub{
+	border: 1px solid #175a74;
+	border-bottom: none;
+}
+.content #right-side{
+	width: 100%;
+	height: auto;
+}
+
+/* Strat Ticket search*/
+.content #right-side .search{
+	display: inline-block;
+	position: absolute;
+	left: 25%;
+	top: 62%;
+	transform: translateX(-55%)translateY(-50%);
+}
+.search table{
+	border: 1px solid rgba(0, 0, 0, 0.082);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	width: 350px;
+	padding: 20px 10px;
+}
+.search table tr{
+	height: 50px;
+	margin-bottom: 5px;
+	
+}
+.search table tr ::placeholder{
+	color: rgb(146, 7, 37);
+	font-weight:0;
+	font-family: sans-serif;
+}
+.search table tr td{
+	border: 1px solid grey;
+	cursor: pointer;
+}
+.search table tr td:hover{
+	border-color: black;
+}
+.btn{
+	color: white;
+	background-color: rgb(255, 217, 0); 
+	background-image: linear-gradient(to right, #1d6785, #075675);
+}
+.btn:hover{
+	background-image: linear-gradient(to right, rgb(240, 226, 31), rgb(216, 184, 3));
+	color: rgb(3, 3, 3);
+}
+/* End Ticket search*/
+
+.train{
+	background-color: #fff;
+	height: 100vh;
+	border: 1px solid rgba(255, 0, 0, 0);
+	margin-top: 30px;
+
+}
+.train .massage{
+	z-index: 5;
+	border: 1px solid rgba(0, 0, 205, 0);
+	float: left;
+	width: 40%;
+	height: 100%;
+}
+.train .massage .cotnt{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 20px;
+}
+.train .massage .cotnt h2{
+	font-size: 2.5rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	border: 1px solid rgba(0, 0, 0, 0);
+	padding-bottom: 10px;
+	margin: 0;
+	text-shadow: 7px 5px rgb(223, 223, 223);
+}
+.train .massage .cotnt h5{
+	font-size: 20px;
+	font-weight: 100;
+	border: 1px solid rgba(0, 0, 0, 0);
+	margin: 0;
+	padding-bottom: 10px;
+	letter-spacing: 3px;
+	text-shadow: 6px 4px rgb(243, 243, 243);
+}
+.train .massage .cotnt button{
+	background-color: #ffffff00;
+	border: 1px solid rgba(255, 255, 255, 0);
+	background-color: gold;
+	border-radius: 10px;
+	padding: 2px 20px;
+	font-size: 25px;
+	font-family:cursive;
+	cursor: pointer;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.train .massage .cotnt button:hover{
+	background-color: #045164;
+	color: white;
+}.train .massage .cotnt button a{
+	color: black;
+}
+.train .massage .cotnt button a:hover{
+	color: white;
+}
+
+.train ul{
+	position: relative;
+	top: 50%;
+	float: right;
+	transform: translateY(-50%);
+	width: 50%;
+	border: 1px solid rgba(10, 148, 118, 0);
+}
+.train li{
+	display: inline-block;
+	position: relative;
+	margin-right: 5px;
+	left: 30%;
+	transform: translateX(-90%);
+	background-color: white;
+	text-align: center;
+	padding-bottom: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.train li h3{
+	font-size: 1.8rem;
+	font-weight: 300;
+	color: #045164;
+	cursor: pointer;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.train li button{
+	z-index: 8;
+	padding: 8px 15px;
+	cursor: pointer;
+	font-size: 17px;
+	border: none;
+	background-color: #0f465c;
+	color: #fff;
+	border-radius: 7px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.train li button:hover{
+	font-weight: 600;
+	background-color: #4e0742;
+}
+/* End Main Style*/
+footer{
+	background-color: #1a5a74;
+	border: 1px solid rgba(255, 255, 255, 0);
+}
+footer .p{
+	border: 1px solid rgba(212, 18, 18, 0);
+	width: 40%;
+	float: left;
+	padding-top: 7px;
+}
+footer .info{
+	border: 1px solid rgba(212, 18, 18, 0);
+	display: inline-block;
+	margin-left: 12%;
+}
+footer .info p{
+	display: inline-block;
+	padding: 0 10px;
+}
+@media only screen and (max-width: 900px) {
+	.content #right-side .search{
+		background-color: rebeccapurple;
+		position: relative;
+		left: 50%;
+		top: 100%;
+		transform: translateX(-50%) translateY(0%);
+	}
+	.content{
+		height: auto;
+	}
+	.train li{
+		left: 50%;
+		transform: translateX(-55%);
+	}
+}
+@media only screen and (max-width: 400px){
+	.train li{
+		display: block;
+		width: fit-content;
+		left: 50%;
+		transform: translateX(-55%);
+	}
+}
+
+.search-button{
+	visibility: hidden;
+	width: 100%;
+	height: 100vh;
+	border: 1px solid black;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+}
+.search-button .cnt{
+	width: fit-content;
+	padding: 50px 50px;
+	position: relative;
+	top: 35%;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.search-button .cnt h3{
+	font-size: 2vw;
+	font-weight: 200;
+}
+.search-button .cnt button{
+	border: 1px solid rgba(0, 0, 0, 0);
+	padding: 10px 40px;
+	font-size: 20px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	cursor: pointer;
+	background-color: #1a5a74;
+	color: white;
+	border-radius: 10px;
+}
+.search-button .cnt button:hover{
+	background-color: #4e0742;
+}
